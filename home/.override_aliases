@@ -1,0 +1,9 @@
+# These are placed here due to conditionals between shells
+# having different syntax, making a shared alias file for 
+# these not parseable.
+# <to_be_replaced>=<replaced_by_this_if_exists>
+ls=exa --git
+du=dust
+cat=bat
+grep=rg -uuu
+vim=nvim

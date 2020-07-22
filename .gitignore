@@ -1,0 +1,13 @@
+*.swp
+home/.ssh/*
+.idea/
+.bash_history
+home/.vim__core/autoload
+home/.vim__core/plugged
+home/.vim__core/nvim
+home/.vim__core/tmp
+home/.vim__core/.vim__core
+share/fonts/*
+*.netrwhist
+
+

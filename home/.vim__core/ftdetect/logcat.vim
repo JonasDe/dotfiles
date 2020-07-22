@@ -1,0 +1,1 @@
+/Users/jdanebjer/dev/triage-tools/util/vim/ftdetect/logcat.vim

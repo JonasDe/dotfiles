@@ -1,0 +1,14 @@
+[submodule "home/.wallpapers"]
+	path = home/.wallpapers
+	url = https://gitlab.com/jonasd90/wallpapers.git
+	branch = master
+[submodule "i3wm-themer"]
+	path = i3wm-themer
+	url = https://github.com/JonasDe/i3wm-themer
+	branch = master
+[submodule "TODO"]
+	path = TODO
+	url = git@github.com:JonasDe/TODO.git
+[submodule "private"]
+	path = private
+	url = https://github.com/JonasDe/dotfiles-private

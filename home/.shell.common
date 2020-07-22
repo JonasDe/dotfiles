@@ -1,0 +1,79 @@
+#!/bin/sh
+PATHS=("$HOME/.cargo/bin" "$HOME/.bin" "$HOME/.local/bin" "$HOME/.emacs.d/bin" "$HOME/Applications/platform-tools/")
+ENVS=("CONFIG,$HOME/config" "DOT,$HOME/dotfiles")
+SOURCES_FILES=(.bash_aliases .bash_functions)
+SOURCES_DIRS=($HOME $HOME/.private $HOME/.local)
+
+SOURCES=($HOME/.bin/z.sh)
+
+for i in ${SOURCES_DIRS[@]};
+do
+    for j in ${SOURCES_FILES[@]};
+    do
+        SOURCES+=($i/$j)
+    done
+done
+MAC_SOURCES=($HOME/.bash_aliases.osx)
+
+function source_if_exists() {
+    [ -f $1 ] && source $1
+}
+function set_envs(){
+    # Set common environment variables for bash and zsh
+    if [ -n "$ZSH_VERSION" ]; then
+              setopt sh_word_split
+    fi
+    OLDIFS=$IFS
+    for i in "${ENVS[@]}"
+    do   
+        IFS=","
+        set -- $i
+        export $1="${2}"
+    done 
+    if [ -n "$ZSH_VERSION" ]; then
+              unsetopt sh_word_split
+    fi
+    IFS=$OLDIFS
+}
+source_if_mac(){
+    [[ "$OSTYPE" == "darwin"* ]] && [ -f $1 ] && source $1
+}
+
+if [ -n "$BASH_VERSION" ]; then
+    SOURCES+=($HOME/.fzf.bash)
+    # include .bashrc if it exists
+    for s in "${SOURCES[@]}"; do
+        source_if_exists $s
+    done
+    for p in "${PATHS[@]}"; do
+        
+        export PATH="$p:$PATH"
+    done
+    for m in "${MAC_SOURCES[@]}"; do
+        source_if_mac $m
+    done
+    set_envs
+    export ACTIVE_SHELL=bash
+fi
+
+if [ -n "$ZSH_VERSION" ]; then
+    # include .bashrc if it exists
+    for s in "${SOURCES[@]}"; do
+        source_if_exists $s
+    done
+    for p in "${PATHS[@]}"; do
+        export PATH="$p:$PATH"
+    done
+    for m in "${MAC_SOURCES[@]}"; do
+        source_if_mac $m
+    done
+    set_envs
+    export ACTIVE_SHELL=zsh
+fi
+# TODO Fix sourcing for fish
+if [ -n "$FISH_VERSION" ]; then
+    for p in "${PATHS[@]}"; do
+        export PATH="$p:$PATH"
+    done
+fi
+setxkbmap -option caps:backspace

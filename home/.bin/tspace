@@ -1,0 +1,8 @@
+#!/bin/bash
+# - polka - 
+
+TARGET_DIR=$(pwd)
+TARGET_NAME=$(basename "$TARGET_DIR")
+TMUX=
+tmux new -d -s "$TARGET_NAME" -c "$TARGET_DIR" \; split-window -h \; split-window -v
+tmux switchc -t "$TARGET_NAME"

@@ -1,0 +1,7 @@
+# key: vendor
+# name: A generic template for a vendor of interest
+# --
+** Name: $1
+*** Phone Number: $2
+*** Details: $3
+

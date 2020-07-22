@@ -1,0 +1,5 @@
+Dont forget to change so that ALT+GR is actually enabled. Some layouts dont have this enabled by default
+
+The us keymap file goes to /usr/share/X11/xkb/symbols/
+
+might have to delete xkb-cache in order for the settings to refresh

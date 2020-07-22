@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  webserver:
+    build:
+      context: ./
+      args:
+        - SSH_PASS=${SSH_PASS}
+        - SSH_USER=${SSH_USER}
+    restart: always
+    volumes:
+      - ./docker:/var/www/html/docker
+      - ./docker/sshd_config:/etc/ssh/sshd_config
+    ports:
+      - "${HOST_SSH_PORT}:22"

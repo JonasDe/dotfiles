@@ -1,0 +1,16 @@
+#!/bin/bash
+if [ -z $(type -p dtrx ) ]; then
+    echo "dtrx not installed. Please install first"
+fi
+WD=$(pwd)
+mkdir -p $2
+echo "mv $1 $2"
+mv $1 $2
+filename=$(basename $1)
+echo $filename
+echo $2
+cd $2 && dtrx $filename
+
+
+
+
