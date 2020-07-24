@@ -317,26 +317,14 @@ backup() {
   echo -e "${green}Backup of $SRC done!"
 }
 link() {
-
   local SRC=$DOTFILES_ROOT/$1
   local DST=$2
   echo -e "${yellow}Linking files in $SRC -> $DST"
   for FILE in ${FILES[@]}; do
     FILE=$(basename $FILE)
-    continue
-    if [[ $(contains $IGNORE $FILE) == 0 ]]; then
-      echo skip $FILE
-      continue
-    fi
-    LAST_CHAR="${FILE: -1}"
-
-    if [[ $CORE_ONLY == "true" && $LAST_CHAR != "!" ]]; then
-      continue
-    fi
     env rm -rf $DST/$FILE
     mkdir -p $DST && ln -fs "$SRC/$FILE" "$DST/$DST_NAME"
   done
-
   echo -e "${green}Linking of $SRC done!"
 }
 restore() {
