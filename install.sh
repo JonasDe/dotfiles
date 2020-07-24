@@ -94,10 +94,12 @@ _aur_from_source() {
 }
 # TODO: Make dynamic
 is_offline() {
-  return $(echo $1 | grep "$OFFLINE_SUFFIX")
+  $(echo $1 | grep -q "$OFFLINE_SUFFIX")
+  return $?
 }
-is_core() {
-  return $(echo $1 | grep "$CORE_SUFFIX")
+is_core() { 
+  $(echo $1 | grep -q "$CORE_SUFFIX")
+  return $?
 }
 is_scpignore() {
   return $(echo $1 | grep "$CORE_SUFFIX")
@@ -381,9 +383,38 @@ secure_shell_deploy() {
 }
 
 collect_files(){
+    echo placeholder
+    
+
     # Simply 
 }
+validate(){
+  VALID_FILES=()
+
+  local SRC=$DOTFILES_ROOT/$1
+  if [[ -f $SRC/$OS_IGNORE ]]; then IGNORE=$(cat $SRC/$OS_IGNORE); fi
+  for FILE in $SRC/*; do
+    FILE=$(basename $FILE)
+    if [[ $(contains $IGNORE $FILE) == 0 ]]; then
+      echo "file in osignore, skipping" $FILE
+      continue
+    fi
+    if [[ $CORE_ONLY  ]]; then
+        is_core $FILE
+        [ $? -ne 0 ] && continue
+    fi
+    if [[ $OFFLINE_ONLY ]]; then
+        is_offline $FILE
+        [ $? -ne 0 ] && continue
+    fi
+    VALID_FILES+=($FILE)
+    echo "adding $FILE"
+  done
+  echo  "${FILES[@]}"
+}
+
 filter_suffixes(){
+    echo "placeholder"
 
 }
 
@@ -424,6 +455,10 @@ main() {
       ;;
     -o)
       OFFLINE_ONLY=true
+      shift
+      ;;
+    -v)
+      commands+=("validate")
       shift
       ;;
     -b)
