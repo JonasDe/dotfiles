@@ -307,9 +307,7 @@ backup() {
   local SRC=$2
   echo -e "${yellow}Backing up $SRC -> $DST"
   mkdir -p $DST
-
   cd "$DST" || exit
-
   for FILE in $DOTFILES_ROOT/$1/*; do
     FILE=$(basename $FILE)
     [ -f $DST/$FILE ] && cp -a $SRC/$FILE $DST/$FILE
@@ -320,7 +318,9 @@ link() {
   local SRC=$DOTFILES_ROOT/$1
   local DST=$2
   echo -e "${yellow}Linking files in $SRC -> $DST"
-  for FILE in ${FILES[@]}; do
+  FILES=$(validate $SRC $DST)
+  echo "${FILES[@]}"
+  for FILE in "${FILES[@]}"; do
     FILE=$(basename $FILE)
     env rm -rf $DST/$FILE
     mkdir -p $DST && ln -fs "$SRC/$FILE" "$DST/$DST_NAME"
@@ -333,12 +333,10 @@ restore() {
   mkdir -p $DST
   cd "$DST" || exit
   echo -e "${yellow}Restoring $SRC -> $DST"
-
   for FILE in $SRC/*; do
     FILE=$(basename $FILE)
     env cp -rfa "$SRC/$FILE" "$DST/$FILE"
   done
-
   echo -e "${green}Restore of $SRC done!"
 }
 
@@ -358,6 +356,7 @@ install_packages() {
 
 }
 secure_shell_copy() {
+ files
   echo abc
 }
 secure_shell_deploy() {
@@ -393,7 +392,6 @@ validate(){
         is_in_controlfile $FILE $DST $SRC/$SCPIGNORE
         [ $? -ne 0 ] && continue
     fi
-
     VALID_FILES+=($FILE)
   done
   echo "${VALID_FILES[@]}"

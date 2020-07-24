@@ -1,1 +1,1 @@
-../../home/.vimrc__core
+../../home/.vimrc
