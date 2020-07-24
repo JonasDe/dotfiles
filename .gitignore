@@ -2,11 +2,11 @@
 home/.ssh/*
 .idea/
 .bash_history
-home/.vim__core/autoload
-home/.vim__core/plugged
-home/.vim__core/nvim
-home/.vim__core/tmp
-home/.vim__core/.vim__core
+home/.vim/autoload
+home/.vim/plugged
+home/.vim/nvim
+home/.vim/tmp
+home/.vim/.vim__core
 share/fonts/*
 *.netrwhist
 

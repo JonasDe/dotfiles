@@ -18,8 +18,8 @@ green='\e[1;32m'
 white='\e[0;37m'
 
 # These suffixes are used for conditional operations on certain files
-OFFLINE_SUFFIX=__offline
-CORE_SUFFIX=__core
+OFFLINEONLY=.offlineonly
+COREONLY=.coreonly
 SCPIGNORE=.scpignore
 
 SYMLINK_MAP=("home,$HOME" "config,$CONFIG_HOME" "share,$LOCAL_SHARE" "hooks,$DOTFILES_ROOT/.git/hooks" "emacs-private,$EMACS_PRIVATE" "dev,$HOME/dev")
@@ -97,9 +97,19 @@ is_offline() {
   $(echo $1 | grep -q "$OFFLINE_SUFFIX")
   return $?
 }
-is_core() { 
-  $(echo $1 | grep -q "$CORE_SUFFIX")
-  return $?
+is_in_controlfile() { 
+    local FILE=$1
+    local CONTROL_FILE=$2
+  if [[ -f $CONTROL_FILE ]];
+  then 
+        CONTROL=$(cat $CONTROL_FILE | awk '{print}' ORS=" "); 
+  else
+        return 1
+  fi
+  if [[ $(contains "$CONTROL" $FILE) == 0 ]]; then
+    return 0
+  fi
+  return 1
 }
 is_scpignore() {
   return $(echo $1 | grep "$CORE_SUFFIX")
@@ -126,12 +136,8 @@ is_valid() {
     return 0
 }
 
-trim_control_suffixes() {
-  F=$(echo $1 | sed "s/\(.*\)$OFFLINE_SUFFIX/\1/")
-  F=$(echo $F | sed "s/\(.*\)$CORE_SUFFIX/\1/")
-  F=$(echo $F | sed "s/\(.*\)$SCPIGNORE_SUFFIX/\1/")
-  echo $F
-}
+  #F=$(echo $1 | sed "s/\(.*\)$OFFLINE_SUFFIX/\1/")
+  #F=$(echo $F | sed "s/\(.*\)$CORE_SUFFIX/\1/")
 trim_exc() {
   LAST_CHAR="${FILE: -1}"
   if [[ $LAST_CHAR == "!" ]]; then
@@ -306,7 +312,6 @@ backup() {
 
   for FILE in $DOTFILES_ROOT/$1/*; do
     FILE=$(basename $FILE)
-    FILE=$(trim_control_suffixes $FILE)
     [ -f $DST/$FILE ] && cp -a $SRC/$FILE $DST/$FILE
   done
   echo -e "${green}Backup of $SRC done!"
@@ -328,7 +333,6 @@ link() {
     if [[ $CORE_ONLY == "true" && $LAST_CHAR != "!" ]]; then
       continue
     fi
-    DST_NAME=$(trim_control_suffixes $FILE)
     env rm -rf $DST/$FILE
     mkdir -p $DST && ln -fs "$SRC/$FILE" "$DST/$DST_NAME"
   done
@@ -381,41 +385,31 @@ secure_shell_deploy() {
   #ENDSSH
   ssh -t $@ "git clone $dotfiles_url && cd dotfiles && ./install.sh -l && /bin/sh"
 }
-
-collect_files(){
-    echo placeholder
-    
-
-    # Simply 
-}
 validate(){
   VALID_FILES=()
-
   local SRC=$DOTFILES_ROOT/$1
-  if [[ -f $SRC/$OS_IGNORE ]]; then IGNORE=$(cat $SRC/$OS_IGNORE); fi
+  local DST=$2
   for FILE in $SRC/*; do
     FILE=$(basename $FILE)
-    if [[ $(contains $IGNORE $FILE) == 0 ]]; then
-      echo "file in osignore, skipping" $FILE
-      continue
-    fi
-    if [[ $CORE_ONLY  ]]; then
-        is_core $FILE
+    if [[ $CORE_ONLY ]]; then
+        is_in_controlfile $FILE $SRC/$COREONLY
         [ $? -ne 0 ] && continue
     fi
     if [[ $OFFLINE_ONLY ]]; then
-        is_offline $FILE
+        is_in_controlfile $FILE $DST $SRC/$OFFLINEONLY
         [ $? -ne 0 ] && continue
     fi
+    is_in_controlfile $FILE $DST $SRC/$OS_IGNORE
+    [ $? -eq 0 ] && continue
+    if [[ $SCPCOPY ]]; then
+        is_in_controlfile $FILE $DST $SRC/$SCPIGNORE
+        [ $? -ne 0 ] && continue
+    fi
+
     VALID_FILES+=($FILE)
     echo "adding $FILE"
   done
-  echo  "${FILES[@]}"
-}
-
-filter_suffixes(){
-    echo "placeholder"
-
+  echo "${VALID_FILES[@]}"
 }
 
 main() {
@@ -445,6 +439,7 @@ main() {
       ;;
     -s)
       commands+=("secure_shell_copy")
+      SCPCOPY=true
       shift
       ;;
     -d)
@@ -475,7 +470,6 @@ main() {
       commands+=("restore")
       shift
       shift
-
       ;;
     *)
       echo "Command not found" >&2
