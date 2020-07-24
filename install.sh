@@ -317,13 +317,13 @@ backup() {
   echo -e "${green}Backup of $SRC done!"
 }
 link() {
+
   local SRC=$DOTFILES_ROOT/$1
   local DST=$2
   echo -e "${yellow}Linking files in $SRC -> $DST"
-  if [[ -f $SRC/$OS_IGNORE ]]; then IGNORE=$(cat $SRC/$OS_IGNORE); fi
-
-  for FILE in $SRC/*; do
+  for FILE in ${FILES[@]}; do
     FILE=$(basename $FILE)
+    continue
     if [[ $(contains $IGNORE $FILE) == 0 ]]; then
       echo skip $FILE
       continue
@@ -387,7 +387,7 @@ secure_shell_deploy() {
 }
 validate(){
   VALID_FILES=()
-  local SRC=$DOTFILES_ROOT/$1
+  local SRC=$1
   local DST=$2
   for FILE in $SRC/*; do
     FILE=$(basename $FILE)
@@ -407,7 +407,6 @@ validate(){
     fi
 
     VALID_FILES+=($FILE)
-    echo "adding $FILE"
   done
   echo "${VALID_FILES[@]}"
 }
