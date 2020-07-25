@@ -120,7 +120,7 @@ if [ -f $file ]; then
         A="$(cut -d'=' -f1 <<<"$line")"
         B="$(cut -d'=' -f2 <<<"$line")"
         # Only make alias if other program exists
-        [[ $(type $B >/dev/null 2>&1) ]] && continue
+        [[ -z $(command -v $B) ]] && continue
         alias $A="$B"
     done < "$file"
 fi
@@ -128,7 +128,7 @@ fi
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
 [[ "$OSTYPE" == "darwin"* ]] && [ -f $HOME/.bash_aliases.osx ] && source $HOME/.bash_aliases.osx
 BROOT=$HOME/Library/Preferences/org.dystroy.broot/launcher/bash/br
-[ -f $BROOT ] && source $BROOT
+[ -f $BROOT ] && source 
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

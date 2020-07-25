@@ -20,7 +20,7 @@ white='\e[0;37m'
 # These suffixes are used for conditional operations on certain files
 OFFLINEONLY=.offlineonly
 COREONLY=.coreonly
-SCPIGNORE=.scpignore
+SCPALLOW=.scpallow
 
 SYMLINK_MAP=("home,$HOME" "config,$CONFIG_HOME" "share,$LOCAL_SHARE" "hooks,$DOTFILES_ROOT/.git/hooks" "emacs-private,$EMACS_PRIVATE" "dev,$HOME/dev")
 
@@ -114,31 +114,6 @@ is_in_controlfile() {
   fi
   return 1
 }
-is_scpignore() {
-  return $(echo $1 | grep "$CORE_SUFFIX")
-}
-is_valid() {
-    is_core $1
-    if [ $CORE_ONLY && "$?" != "0" ];
-    then
-        return -1
-    fi
-    is_offline $1
-    if [ $OFFLINE_ONLY && "$?" != "0" ];
-    then
-        return -1
-    fi
-    is_scpignore $1
-    # Special case here. We want SCPIGNORE to ignore
-    # files, thus marking them as not valid if this flag
-    # is on and we find `__scpignore` in the name
-    if [ $SCPIGNORE && "$?" == "0" ];
-    then
-        return -1
-    fi
-    return 0
-}
-
   #F=$(echo $1 | sed "s/\(.*\)$OFFLINE_SUFFIX/\1/")
   #F=$(echo $F | sed "s/\(.*\)$CORE_SUFFIX/\1/")
 trim_exc() {
@@ -387,19 +362,29 @@ validate(){
     FILE=$(basename $FILE)
     if [[ $CORE_ONLY ]]; then
         is_in_controlfile $FILE $SRC/$COREONLY
-        [ $? -ne 0 ] && continue
+        if [ $? -eq 0 ]; then
+           [[ -z $VALIDATE ]] && continue
+           echo "$FILE $SRC/$COREONLY" 
+        fi
     fi
     if [[ $OFFLINE_ONLY ]]; then
         is_in_controlfile $FILE $SRC/$OFFLINEONLY
-        [ $? -ne 0 ] && continue
+        if [ $? -eq 0 ]; then
+           [[ -z $VALIDATE ]] && continue
+           echo "$FILE $SRC/$OFFLINEONLY" 
+        fi
     fi
     is_in_controlfile $FILE $SRC/$OS_IGNORE
     [ $? -eq 0 ] && continue
+
     if [[ $SCPCOPY ]]; then
-        is_in_controlfile $FILE $SRC/$SCPIGNORE
-        [ $? -eq "0" ] && continue
+        is_in_controlfile $FILE $SRC/$SCPALLOW
+        if [ $? -eq 0 ]; then
+           [[ -z $VALIDATE ]] && continue
+           echo "$FILE $SRC/$SCPALLOW" 
+        fi
+
     fi
-    echo "Adding $FILE"
     VALID_FILES+=($FILE)
   done
 }
@@ -457,8 +442,12 @@ main() {
       shift
       ;;
     -v)
-      commands+=("validate")
-      shift
+      OFFLINE_ONLY=true
+      CORE_ONLY=true
+      SCPCOPY=true 
+      VALIDATE=true
+      run_command_over_symlink_map validate
+      exit
       ;;
     -b)
       backup=false

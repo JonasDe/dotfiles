@@ -23,7 +23,7 @@ mklalias(){
     echo "alias $name='$@'" >> ~/.local/.bash_aliases
     source ~/.local/.bash_aliases
 }
-mkoalias(){ 
+mkpalias(){ 
     name=$1
     shift
     echo "alias $name='$@'" >> ~/.private/.bash_aliases

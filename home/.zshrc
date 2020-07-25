@@ -77,7 +77,7 @@ if [ -f $file ]; then
         A="$(cut -d'=' -f1 <<<"$line")"
         B="$(cut -d'=' -f2 <<<"$line")"
         # Only make alias if other program exists
-        [[ $(type $B >/dev/null 2>&1) ]] && continue
+        [[ $(command -v $B) ]] && continue
         alias $A="$B"
     done < "$file"
 fi
