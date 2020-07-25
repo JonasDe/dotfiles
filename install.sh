@@ -339,6 +339,7 @@ populate_temp_for_scp() {
   mkdir -p $TEMP_DST
   validate $SRC
   for FILE in "${VALID_FILES[@]}";do
+        echo cp -r $SRC/$FILE $TEMP_DST
         cp -r $SRC/$FILE $TEMP_DST
   done
 }
@@ -379,8 +380,10 @@ validate(){
 
     if [[ $SCPCOPY ]]; then
         is_in_controlfile $FILE $SRC/$SCPALLOW
-        if [ $? -eq 0 ]; then
+        ## Is not in controlfile
+        if [ $? -ne 0 ]; then
            [[ -z $VALIDATE ]] && continue
+        else
            echo "$FILE $SRC/$SCPALLOW" 
         fi
 
@@ -425,6 +428,9 @@ main() {
 
       run_command_over_symlink_map populate_temp_for_scp
       cp $DOTFILES_ROOT/install.sh $TEMP
+      echo $VALID_FILES
+      echo $TEMP
+      exit 0
 
       scp -P $PORT -r $TEMP "$USER@$HOST:~"
       ssh -t $USER@$HOST -p $PORT "cd ~/dotfiles && ./install.sh -l && /bin/bash"
