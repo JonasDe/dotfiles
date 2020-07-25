@@ -339,24 +339,28 @@ populate_temp_for_scp() {
   mkdir -p $TEMP_DST
   validate $SRC
   for FILE in "${VALID_FILES[@]}";do
-        echo cp -r $SRC/$FILE $TEMP_DST
         cp -r $SRC/$FILE $TEMP_DST
   done
 }
 secure_shell_deploy() {
-  echo "ssh $@"
+  local USER=$1
+  local HOST=$2
+  local PORT=$3
   dotfiles_url=$(git remote show origin | head -n 2 | tail -n 1 | awk '{print $3;}')
   if [ -z $(echo $prefix | grep https) ]; then
-    host=$(echo $dotfiles_url | cut -d ':' -f 1 | cut -d '@' -f 2)
+    remote_host=$(echo $dotfiles_url | cut -d ':' -f 1 | cut -d '@' -f 2)
     repo=$(echo $dotfiles_url | cut -d ':' -f 2)
-    dotfiles_url=https://$host/$repo
+    dotfiles_url=https://$remote_host/$repo
   fi
+  echo $dotfiles_url
   #ssh -t $@ <<ENDSSH
   #git clone $dotfiles_url && cd dotfiles && ./install.sh -l
   #ENDSSH
-  ssh -t $@ "git clone $dotfiles_url && cd dotfiles && ./install.sh -l && /bin/sh"
+  echo ssh -p $PORT -t $USER@$HOST "git clone $dotfiles_url && cd dotfiles && ./install.sh -l && /bin/sh"
+  ssh -t $USER@$HOST -p $PORT "git clone $dotfiles_url && cd dotfiles && ./install.sh -l && /bin/sh"
 }
 validate(){
+  #TODO: Clean this up and make more dynamic
   VALID_FILES=()
   local SRC=$1
   for FILE in $SRC/*; do
@@ -384,7 +388,7 @@ validate(){
         if [ $? -ne 0 ]; then
            [[ -z $VALIDATE ]] && continue
         else
-           echo "$FILE $SRC/$SCPALLOW" 
+           [[ $VALIDATE ]] && "$FILE $SRC/$SCPALLOW" 
         fi
 
     fi
@@ -428,10 +432,6 @@ main() {
 
       run_command_over_symlink_map populate_temp_for_scp
       cp $DOTFILES_ROOT/install.sh $TEMP
-      echo $VALID_FILES
-      echo $TEMP
-      exit 0
-
       scp -P $PORT -r $TEMP "$USER@$HOST:~"
       ssh -t $USER@$HOST -p $PORT "cd ~/dotfiles && ./install.sh -l && /bin/bash"
       rm -rf $TEMP
@@ -439,7 +439,10 @@ main() {
       ;;
     -d)
       shift
-      secure_shell_deploy "$@"
+      local USER=$1
+      local HOST=$2
+      local PORT="${3:-22}"
+      secure_shell_deploy $USER $HOST $PORT
       # "This operation cannot be chained"
       exit 0
       ;;

@@ -112,3 +112,4 @@ alias estar="vim $HOME/dotfiles/config/starship.toml"
 alias lzd="lazydocker"
 alias hs="hg status"
 alias tls='tmux list-session'
+alias q='exit'

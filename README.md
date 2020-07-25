@@ -4,7 +4,7 @@ This is my own personal collection of dotfiles. It contains very personal config
 
 ## `install.sh` features
 
-* SCP dotfiles over SSH to host (TODO)
+* SCP dotfiles over SSH to host 
 * Deploy dotfiles over SSH to host (SSH -> Clone -> Link)
 * Marking dotfiles as 'core' and 'offline', used to control which files the
 commands will affect. Can be seen as a filter on which files to operate. 
@@ -17,33 +17,50 @@ commands will affect. Can be seen as a filter on which files to operate.
 
 *Examples*:
 
-Link only files marked 'core' (containing the string "__core")
+Link only files in .coreonly
 
 ```
 ./install.sh -l -c
 ```
 
-Link only files marked 'offline' (containing the string "__offline")
+Link only files in .offlineonly
 ```
 ./install.sh -l -o
 ```
+
 Deploy on a remote server (will clone and link dotfiles):
-`install.sh -d <ssh args>`
-example:
 ```
-./install.sh -d test@0.0.0.0 -p 14403
+./install.sh -d <user> <host_ip> <port>
 ```
-
-TODO:
-Scp dotfiles marked 'core' to remote host (from home path)
+Scp dotfiles in .coreonly, .offlineonly and .scpallow
 ```
-./install.sh -c -s user@destination
+./install.sh -o -c -s <user> <host_ip> <port>
 ```
 
-TODO:
-Scp to host files marked offline
+
+Scp dotfiles in .coreonly and .scpallow
 ```
-./install.sh -o -s user@destination
+./install.sh -c -s <user> <host> <port>
+```
+
+Scp dotfiles in .scpallow
+```
+./install.sh -s <user> <host> <port>
+```
+
+Which files are considered .offlineonly
+```
+./install.sh -v | grep .offlineonly
+```
+
+Which files are considered .coreonly
+```
+./install.sh -v | grep .coreonly
+```
+
+Which files are considered .scpallow
+```
+./install.sh -v | grep .scpallow
 ```
 
 Intended to work on multiple OSes and Distros.
@@ -71,36 +88,37 @@ Options:
 
 Variables:
 `$SYMLINK_MAP` is used to define a dotfiles folder to a corresponding
-destination on the host. This is what controls the symlinking.
+destination on the host. If a folder is not setup here it will not be subject to
+linking.
 
 
-Os-specific definitions):
+Os-specific definitions:
 `$OS` is accessible and should be set to the corresponding OS variable (see code
-for instructions of where to add it). 
+for instructions of where to support fort a new OS). 
 
 `$OS_IGNORE` add your personal `.<os>ignore` filename here. This can be placed
 in any folder to provide symlink ignore for specific files.
 
 `$OS_INSTALL` what function to call for your specific OS. Also
 
-File suffix-flags:
-Appending a suffix-flag to a dotfiles name will modify how the script deals with
-those files. The following is a list of available such flags:
 
-Offline:
-TODO: A suffix-flag for files that are to be considered 'usable offline'. 
-The main usecase here is to filter the files that are copied over with SCP, in
-case the host doesn't have internet access and it is still better to have a
-subset of the files rather than none.
+Control Files
+## .scpallow
+Files have to be added to this list to be the target for the `-s` command. This limits 
+the number of files transferred over SCP to that which is explicitly intended.
 
-Simply add `__offline` as a suffix to your dotfiles. The linker will strip this
-suffix when deploying the dotfiles anyway.
+## .coreonly
+When the `-c` flag is passed, this further restricts files included on other commands.
+Only files in the `.coreonly` file will pass this check.
 
-Core:
-TODO: A suffix-flag for files that are to be considered 'core'. 
+## .offlineonly
+When the `-o` flag is passed, this further restricts files included on other commands.
+Only files in the `.offlineonly` file will pass this check.
 
-Simply add `__core` as a suffix to your dotfiles. The linker will strip this
-suffix when deploying the dotfiles anyway.
+## .<os>ignore
+Files on this will be ignored for all operations on this operative system. Some logic
+has to be added to `install.sh` to provide support for a new OS. Code commends should
+be enough to guide the user through this procedure.
 
 ### install
 
