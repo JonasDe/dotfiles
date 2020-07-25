@@ -357,7 +357,7 @@ install_packages() {
 secure_shell_copy() {
   local SRC=$DOTFILES_ROOT/$1
   local DST=$2
-  local USER=$3
+  local USR=$3
   local HOST=$4
   local PORT="${5:-22}"
   validate $SRC $DST
@@ -366,9 +366,8 @@ secure_shell_copy() {
         SCP_TARGETS+=($SRC/$FILE)
   done
   DST=$(sed "s~$HOME~~g" <(echo "$DST"))
-
-  echo scp -P $PORT "${SCP_TARGETS[@]}" "$USER@$HOST:~$DST"
-  scp -P $PORT -r "${SCP_TARGETS[@]}" "$USER@$HOST:~$DST"
+  ssh $USR@$HOST -p $PORT "mkdir -p ~/dotfiles/$1"
+  scp -P $PORT -r "${SCP_TARGETS[@]}" "$USR@$HOST:~/dotfiles/$1"
 }
 secure_shell_deploy() {
   echo "ssh $@"
@@ -436,7 +435,13 @@ main() {
     -s)
       shift
       SCPCOPY=true
-      run_command_over_symlink_map secure_shell_copy "$@"
+      local USER=$1
+      local HOST=$2
+      local PORT="${3:-22}"
+      echo scp -P $PORT -r "$DOTFILES_ROOT/install.sh" "$USER@$HOST:~/dotfiles/"
+      run_command_over_symlink_map secure_shell_copy $USER $HOST $PORT
+      scp -P $PORT -r "$DOTFILES_ROOT/install.sh" "$USER@$HOST:~/dotfiles/"
+      ssh -t $USER@$HOST -p $PORT "cd ~/dotfiles && ./install.sh -l"
       ;;
     -d)
       shift
