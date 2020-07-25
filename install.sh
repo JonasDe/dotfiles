@@ -66,7 +66,6 @@ elif [[ "$(uname)" == "$MAC" ]]; then
   OS_INSTALL=mac_install
   OS_IGNORE=.macignore
 elif [[ "$(uname -r)" == *"$UBUNTU"* ]]; then
-  echo empty
   OS=$UBUNTU
   OS_INSTALL=ubuntu_install
   OS_IGNORE=.ubuntignore
@@ -318,9 +317,9 @@ link() {
   local SRC=$DOTFILES_ROOT/$1
   local DST=$2
   echo -e "${yellow}Linking files in $SRC -> $DST"
-  FILES=$(validate $SRC $DST)
-  echo "${FILES[@]}"
-  for FILE in "${FILES[@]}"; do
+  validate $SRC $DST
+  echo "${VALID_FILES[@]}"
+  for FILE in "${VALID_FILES[@]}"; do
     FILE=$(basename $FILE)
     env rm -rf $DST/$FILE
     mkdir -p $DST && ln -fs "$SRC/$FILE" "$DST/$DST_NAME"
@@ -356,8 +355,20 @@ install_packages() {
 
 }
 secure_shell_copy() {
- files
-  echo abc
+  local SRC=$DOTFILES_ROOT/$1
+  local DST=$2
+  local USER=$3
+  local HOST=$4
+  local PORT="${5:-22}"
+  validate $SRC $DST
+  SCP_TARGETS=()
+  for FILE in "${VALID_FILES[@]}";do
+        SCP_TARGETS+=($SRC/$FILE)
+  done
+  DST=$(sed "s~$HOME~~g" <(echo "$DST"))
+
+  echo scp -P $PORT "${SCP_TARGETS[@]}" "$USER@$HOST:~$DST"
+  scp -P $PORT -r "${SCP_TARGETS[@]}" "$USER@$HOST:~$DST"
 }
 secure_shell_deploy() {
   echo "ssh $@"
@@ -383,18 +394,18 @@ validate(){
         [ $? -ne 0 ] && continue
     fi
     if [[ $OFFLINE_ONLY ]]; then
-        is_in_controlfile $FILE $DST $SRC/$OFFLINEONLY
+        is_in_controlfile $FILE $SRC/$OFFLINEONLY
         [ $? -ne 0 ] && continue
     fi
-    is_in_controlfile $FILE $DST $SRC/$OS_IGNORE
+    is_in_controlfile $FILE $SRC/$OS_IGNORE
     [ $? -eq 0 ] && continue
     if [[ $SCPCOPY ]]; then
-        is_in_controlfile $FILE $DST $SRC/$SCPIGNORE
-        [ $? -ne 0 ] && continue
+        is_in_controlfile $FILE $SRC/$SCPIGNORE
+        [ $? -eq "0" ] && continue
     fi
+    echo "Adding $FILE"
     VALID_FILES+=($FILE)
   done
-  echo "${VALID_FILES[@]}"
 }
 
 main() {
@@ -423,9 +434,9 @@ main() {
       shift
       ;;
     -s)
-      commands+=("secure_shell_copy")
-      SCPCOPY=true
       shift
+      SCPCOPY=true
+      run_command_over_symlink_map secure_shell_copy "$@"
       ;;
     -d)
       shift
@@ -483,4 +494,19 @@ main() {
   done
 
 }
+run_command_over_symlink_map(){
+    local COMMAND=$1
+    shift
+    local REMAINDER="$@"
+    OLDIFS=$IFS
+    IFS=','
+    for j in "${SYMLINK_MAP[@]}"; do
+      set -- $j
+      IFS=$OLDIFS
+      $COMMAND $1 $2 $REMAINDER
+      IFS=','
+    done
+    IFS=$OLDIFS
+}
+
 main "$@"
