@@ -191,10 +191,11 @@ Options:
     --help                   Print this message
     -i                       Install all packages
     -l                       Link all dotfiles 
-    -c                       Enables the 'core' flag, reducing the set of files operated on to those with with '__core' in the filename.
-                             dotfiles considered 'core']
+    -c                       Enables the 'core' flag, reducing the set of files operated on to those in `.coreonly`.
+    -o                       Enables the 'offline' flag, reducing the set of files operated on to those in `.offlineonly`.
     -u                       Update submodules
-    -d <ssh_args>            Deploy dotfiles on remote host 
+    -d <user> <host> <port>  Deploy whole dotfiles repo on remote host and link.
+    -s <user> <host> <port>  Scp files in .scpallow to remote host
     -b                       Avoid backing up
     -r <backup_folder>       Restore old config
 EOF
