@@ -73,6 +73,10 @@ elif [[ "$(uname -r)" == *"$FEDORA"* ]]; then
   OS=$FEDORA
   OS_INSTALL=fedora_install
   OS_IGNORE=.fedoraignore
+else
+  #Assume Ubuntu compatibility
+  OS=$UBUNTU
+  OS_INSTALL=ubuntu_install
 fi
 # 4. Add a new case which matches against your distro
 # and assign the OS, OS_INSTALL, and OS_IGNORE variables
@@ -317,7 +321,7 @@ link() {
   local SRC=$DOTFILES_ROOT/$1
   local DST=$2
   echo -e "${yellow}Linking files in $SRC -> $DST"
-  validate $SRC $DST
+  validate $SRC
   echo "${VALID_FILES[@]}"
   for FILE in "${VALID_FILES[@]}"; do
     FILE=$(basename $FILE)
@@ -354,20 +358,14 @@ install_packages() {
   done
 
 }
-secure_shell_copy() {
+populate_temp_for_scp() {
   local SRC=$DOTFILES_ROOT/$1
-  local DST=$2
-  local USR=$3
-  local HOST=$4
-  local PORT="${5:-22}"
-  validate $SRC $DST
-  SCP_TARGETS=()
+  local TEMP_DST=$TEMP/$1
+  mkdir -p $TEMP_DST
+  validate $SRC
   for FILE in "${VALID_FILES[@]}";do
-        SCP_TARGETS+=($SRC/$FILE)
+        cp -r $SRC/$FILE $TEMP_DST
   done
-  DST=$(sed "s~$HOME~~g" <(echo "$DST"))
-  ssh $USR@$HOST -p $PORT "mkdir -p ~/dotfiles/$1"
-  scp -P $PORT -r "${SCP_TARGETS[@]}" "$USR@$HOST:~/dotfiles/$1"
 }
 secure_shell_deploy() {
   echo "ssh $@"
@@ -385,7 +383,6 @@ secure_shell_deploy() {
 validate(){
   VALID_FILES=()
   local SRC=$1
-  local DST=$2
   for FILE in $SRC/*; do
     FILE=$(basename $FILE)
     if [[ $CORE_ONLY ]]; then
@@ -438,10 +435,16 @@ main() {
       local USER=$1
       local HOST=$2
       local PORT="${3:-22}"
-      echo scp -P $PORT -r "$DOTFILES_ROOT/install.sh" "$USER@$HOST:~/dotfiles/"
-      run_command_over_symlink_map secure_shell_copy $USER $HOST $PORT
-      scp -P $PORT -r "$DOTFILES_ROOT/install.sh" "$USER@$HOST:~/dotfiles/"
-      ssh -t $USER@$HOST -p $PORT "cd ~/dotfiles && ./install.sh -l"
+      TEMP=$(mktemp -d)/dotfiles
+      mkdir -p $TEMP
+
+      run_command_over_symlink_map populate_temp_for_scp
+      cp $DOTFILES_ROOT/install.sh $TEMP
+
+      scp -P $PORT -r $TEMP "$USER@$HOST:~"
+      ssh -t $USER@$HOST -p $PORT "cd ~/dotfiles && ./install.sh -l && /bin/bash"
+      rm -rf $TEMP
+      exit 0
       ;;
     -d)
       shift

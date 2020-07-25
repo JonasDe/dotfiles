@@ -59,7 +59,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias $HOME="cd $HOME" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 ## Git
