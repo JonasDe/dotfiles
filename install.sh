@@ -18,9 +18,9 @@ green='\e[1;32m'
 white='\e[0;37m'
 
 # These suffixes are used for conditional operations on certain files
-OFFLINEONLY=.offlineonly
-COREONLY=.coreonly
-SCPALLOW=.scpallow
+OFFLINEFILE=.offlineonly
+COREFILE=.coreonly
+SCPALLOWFILE=.scpallow
 
 SYMLINK_MAP=("home,$HOME" "config,$CONFIG_HOME" "share,$LOCAL_SHARE" "hooks,$DOTFILES_ROOT/.git/hooks" "emacs-private,$EMACS_PRIVATE" "dev,$HOME/dev")
 
@@ -360,38 +360,34 @@ secure_shell_deploy() {
   echo ssh -p $PORT -t $USER@$HOST "git clone $dotfiles_url && cd dotfiles && ./install.sh -l && /bin/sh"
   ssh -t $USER@$HOST -p $PORT "git clone $dotfiles_url && cd dotfiles && ./install.sh -l && /bin/sh"
 }
+validate_in_controlfile(){
+        is_in_controlfile $1 $2 
+        if [ $? -eq 0 ]; then
+            [[ $ECHO_VALIDATION_ONLY ]] && echo "$1 $2"
+        else
+            [[ -z $ECHO_VALIDATION_ONLY ]] && continue
+        fi
+}
 validate(){
-  #TODO: Clean this up and make more dynamic
+  # Fills the array `VALID_FILES`  with the valid files according
+  # to the values set inside the controlfiles.
+  # If the `ECHO_VALIDATION_ONLY` variable is set, will print values that
+  # pass controlfile check.
   VALID_FILES=()
   local SRC=$1
   for FILE in $SRC/*; do
     FILE=$(basename $FILE)
     if [[ $CORE_ONLY ]]; then
-        is_in_controlfile $FILE $SRC/$COREONLY
-        if [ $? -eq 0 ]; then
-           [[ -z $VALIDATE ]] && continue
-           echo "$FILE $SRC/$COREONLY" 
-        fi
+        validate_in_controlfile $FILE $SRC/$COREFILE
     fi
     if [[ $OFFLINE_ONLY ]]; then
-        is_in_controlfile $FILE $SRC/$OFFLINEONLY
-        if [ $? -eq 0 ]; then
-           [[ -z $VALIDATE ]] && continue
-           echo "$FILE $SRC/$OFFLINEONLY" 
-        fi
+        validate_in_controlfile $FILE $SRC/$OFFLINEFILE
     fi
     is_in_controlfile $FILE $SRC/$OS_IGNORE
     [ $? -eq 0 ] && continue
 
     if [[ $SCPCOPY ]]; then
-        is_in_controlfile $FILE $SRC/$SCPALLOW
-        ## Is not in controlfile
-        if [ $? -ne 0 ]; then
-           [[ -z $VALIDATE ]] && continue
-        else
-           [[ $VALIDATE ]] && "$FILE $SRC/$SCPALLOW" 
-        fi
-
+        validate_in_controlfile $FILE $SRC/$SCPALLOWFILE
     fi
     VALID_FILES+=($FILE)
   done
@@ -430,7 +426,6 @@ main() {
       local PORT="${3:-22}"
       TEMP=$(mktemp -d)/dotfiles
       mkdir -p $TEMP
-
       run_command_over_symlink_map populate_temp_for_scp
       cp $DOTFILES_ROOT/install.sh $TEMP
       scp -P $PORT -r $TEMP "$USER@$HOST:~"
@@ -455,7 +450,7 @@ main() {
       OFFLINE_ONLY=true
       CORE_ONLY=true
       SCPCOPY=true 
-      VALIDATE=true
+      ECHO_VALIDATION_ONLY=true
       run_command_over_symlink_map validate
       exit
       ;;
