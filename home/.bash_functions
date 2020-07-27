@@ -38,7 +38,7 @@ gc(){
     git commit -m "$a"
 }
 gra(){
-    cat ~/.bash_aliases ~/.local/.bash_aliases ~/.bash_functions ~/.local/.bash_functions | grep -e "$@"
+    cat ~/.private/.bash_aliases ~/.bash_aliases ~/.local/.bash_aliases ~/.bash_functions ~/.local/.bash_functions | grep -e "$@"
 }
 ta(){
     tmux attach -t $1

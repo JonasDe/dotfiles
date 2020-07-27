@@ -113,3 +113,6 @@ alias lzd="lazydocker"
 alias hs="hg status"
 alias tls='tmux list-session'
 alias q='exit'
+alias epa='vim /Users/jdanebjer/.private/.bash_aliases'
+alias spa='source /Users/jdanebjer/.private/.bash_aliases'
+alias cl='clear'
