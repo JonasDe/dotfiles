@@ -116,3 +116,6 @@ alias q='exit'
 alias epa='vim /Users/jdanebjer/.private/.bash_aliases'
 alias spa='source /Users/jdanebjer/.private/.bash_aliases'
 alias cl='clear'
+alias ga.='git add .'
+alias epbf="vim $HOME/.private/.bash_functions"
+alias spbf="source $HOME/.private/.bash_functions"

@@ -3,8 +3,7 @@ PATHS=("$HOME/.cargo/bin" "$HOME/.bin" "$HOME/.local/bin" "$HOME/.emacs.d/bin" "
 ENVS=("CONFIG,$HOME/config" "DOT,$HOME/dotfiles")
 SOURCES_FILES=(.bash_aliases .bash_functions)
 SOURCES_DIRS=($HOME $HOME/.private $HOME/.local)
-
-SOURCES=($HOME/.bin/z.sh)
+SOURCES=($HOME/.bin/z.sh $HOME/.private/.shell.common)
 
 for i in ${SOURCES_DIRS[@]};
 do
@@ -16,6 +15,7 @@ done
 MAC_SOURCES=($HOME/.bash_aliases.osx)
 
 function source_if_exists() {
+    echo $1
     [ -f $1 ] && source $1
 }
 function set_envs(){
