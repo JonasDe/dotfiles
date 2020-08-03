@@ -33,7 +33,14 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(markdown
-     ( python :variables python-format-on-save t )
+     ( python :variables python-format-on-save t
+              python-backend 'lsp
+              python-lsp-server 'mspyls
+              python-fill-column 99
+              python-formatter 'black
+              python-format-on-save t
+
+              )
 
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
