@@ -1,6 +1,6 @@
 #!/bin/sh
 PATHS=("$HOME/.cargo/bin" "$HOME/.bin" "$HOME/.local/bin" "$HOME/.emacs.d/bin" "$HOME/Applications/platform-tools/")
-ENVS=("CONFIG,$HOME/config" "DOT,$HOME/dotfiles")
+ENVS=("CONFIG,$HOME/config" "DOT,$HOME/dotfiles", "NVM_DIR,$HOME/.nvm")
 SOURCES_FILES=(.bash_aliases .bash_functions)
 SOURCES_DIRS=($HOME $HOME/.private $HOME/.local)
 SOURCES=($HOME/.bin/z.sh $HOME/.private/.shell.common)
@@ -15,7 +15,6 @@ done
 MAC_SOURCES=($HOME/.bash_aliases.osx)
 
 function source_if_exists() {
-    echo $1
     [ -f $1 ] && source $1
 }
 function set_envs(){
@@ -53,6 +52,9 @@ if [ -n "$BASH_VERSION" ]; then
         source_if_mac $m
     done
     set_envs
+    #TODO: Combine common cfg between zsh and bash
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
     export ACTIVE_SHELL=bash
 fi
 
@@ -69,7 +71,11 @@ if [ -n "$ZSH_VERSION" ]; then
     done
     set_envs
     export ACTIVE_SHELL=zsh
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
+
+
 # TODO Fix sourcing for fish
 if [ -n "$FISH_VERSION" ]; then
     for p in "${PATHS[@]}"; do

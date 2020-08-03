@@ -89,7 +89,6 @@ alias einst="vim $HOME/dotfiles/install.sh"
 alias ekeymaps="vim $HOME/dev/qmk_firmware/keyboards/minidox/keymaps/jonasdedustycmk/keymap.c"
 alias sshot="maim -s | xclip -selection clipboard -t image/png"
 alias chrome="chromium --disable-gpu"
-alias e="emacs"
 
 alias themer="cd $HOME/dotfiles/i3wm-themer"
 alias ash="adb shell"

@@ -4,7 +4,7 @@ function loop(){
     count=$1
     shift
     for i in `seq $count`; do
-        "$@"
+        eval "$@"
     done ;
 }
 function glclone(){ git clone https://gitlab.com/"$1" ;}
@@ -42,6 +42,9 @@ gra(){
 }
 ta(){
     tmux attach -t $1
+}
+e(){
+    emacs "$@" &
 }
 
 
