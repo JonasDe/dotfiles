@@ -120,8 +120,8 @@ unset _comp_files
 
 
 [ -f ~/.local/.zshrc ] && source ~/.local/.zshrc
-eval "$(starship init zsh)"
 
+[[ $(command -v starship) ]] && eval "$(starship init zsh)"
 # added by setup_fb4a.sh
 export ANDROID_SDK=/opt/android_sdk
 export ANDROID_NDK_REPOSITORY=/opt/android_ndk

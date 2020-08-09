@@ -1,5 +1,6 @@
 noremap H ^
 noremap L $
+noremap <C-r> :redo<CR>
 inoremap jk <ESC>
 inoremap ii <ESC>
 noremap b [b
