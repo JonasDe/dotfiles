@@ -29,11 +29,18 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/dotfiles/TODO")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
+
+(after! org
+  (add-to-list 'org-capture-templates
+             '("d" "Dream" entry
+               (file+headline +org-capture-todo-file "Dream")
+               "* TODO %?\n :PROPERTIES:\n :CATEGORY: dream\n :END:\n %i\n"
+               :prepend t )))
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -51,6 +58,8 @@
 ;; This will open documentation for it, including demos of how they are used.
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
+;;
+
 
 (define-key evil-visual-state-map (kbd "L") 'evil-end-of-line)
 (define-key  evil-normal-state-map (kbd "L") 'evil-end-of-line)
