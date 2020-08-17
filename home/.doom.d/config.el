@@ -38,10 +38,10 @@
 ;; Custom org-capture templates
 (after! org
   (add-to-list 'org-capture-templates
-             '("a" "Dream" entry
-               (file+headline +org-capture-todo-file "Dream")
-               "* TODO %?\n :PROPERTIES:\n :CATEGORY: dream\n :END:\n %i\nfile:%F:%(with-current-buffer (org-capture-get :original-buffer) (number-to-string (line-number-at-pos)))"
-               :prepend t )))
+               '("f" "File reference" entry
+                 (file+headline +org-capture-todo-file "FileReference")
+                 "* TODO %?\n :PROPERTIES:\n :CATEGORY: dream\n :END:\n %i\nfile:%F::%(with-current-buffer (org-capture-get :original-buffer) (number-to-string (line-number-at-pos)))"
+                 :prepend t )))
 
 
 

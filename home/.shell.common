@@ -1,6 +1,6 @@
 #!/bin/sh
 PATHS=("$HOME/.cargo/bin" "$HOME/.bin" "$HOME/.local/bin" "$HOME/.emacs.d/bin" "$HOME/Applications/platform-tools/")
-ENVS=("CONFIG,$HOME/config" "DOT,$HOME/dotfiles", "NVM_DIR,$HOME/.nvm")
+ENVS=("CONFIG,$HOME/config" "DOT,$HOME/dotfiles", "NVM_DIR,$HOME/.nvm" "ALTERNATE_EDITOR,''")
 SOURCES_FILES=(.bash_aliases .bash_functions)
 SOURCES_DIRS=($HOME $HOME/.private $HOME/.local)
 SOURCES=($HOME/.bin/z.sh $HOME/.private/.shell.common)

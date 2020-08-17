@@ -44,7 +44,9 @@ ta(){
     tmux attach -t $1
 }
 e(){
-    emacs "$@" &
+    if [ $# -eq 0 ]; then
+        emacsclient -nw 
+        return
+    fi
+    emacsclient "$@" 
 }
-
-
