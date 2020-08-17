@@ -35,12 +35,14 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+;; Custom org-capture templates
 (after! org
   (add-to-list 'org-capture-templates
-             '("d" "Dream" entry
+             '("a" "Dream" entry
                (file+headline +org-capture-todo-file "Dream")
-               "* TODO %?\n :PROPERTIES:\n :CATEGORY: dream\n :END:\n %i\n"
+               "* TODO %?\n :PROPERTIES:\n :CATEGORY: dream\n :END:\n %i\nfile:%F:%(with-current-buffer (org-capture-get :original-buffer) (number-to-string (line-number-at-pos)))"
                :prepend t )))
+
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
