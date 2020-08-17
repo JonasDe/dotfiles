@@ -44,9 +44,5 @@ ta(){
     tmux attach -t $1
 }
 e(){
-    if [ $# -eq 0 ]; then
-        emacsclient -nw 
-        return
-    fi
-    emacsclient "$@" 
+    emacsclient -c -F "'(fullscreen . maximized)" "$@" &
 }
