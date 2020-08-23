@@ -118,3 +118,4 @@ alias cl='clear'
 alias ga.='git add .'
 alias epbf="vim $HOME/.private/.bash_functions"
 alias spbf="source $HOME/.private/.bash_functions"
+alias hu='hg-sl-up'

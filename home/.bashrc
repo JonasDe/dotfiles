@@ -128,7 +128,6 @@ fi
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
 [[ "$OSTYPE" == "darwin"* ]] && [ -f $HOME/.bash_aliases.osx ] && source $HOME/.bash_aliases.osx
 BROOT=$HOME/Library/Preferences/org.dystroy.broot/launcher/bash/br
-[ -f $BROOT ] && source 
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -62,7 +62,6 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;;
 
-
 (define-key evil-visual-state-map (kbd "L") 'evil-end-of-line)
 (define-key  evil-normal-state-map (kbd "L") 'evil-end-of-line)
 (define-key evil-visual-state-map (kbd "H") 'evil-beginning-of-line)
@@ -71,3 +70,20 @@
 (define-key evil-normal-state-map (kbd "C-j") #'evil-window-down)
 (define-key evil-normal-state-map (kbd "C-k") #'evil-window-up)
 (define-key evil-normal-state-map (kbd "C-l") #'evil-window-right)
+
+
+;; MACOS screenshot
+(use-package org-download
+  :after org
+  :defer nil
+  :custom
+  (org-download-method 'directory)
+  (org-download-image-dir "~/dotfiles/TODO/images")
+  (org-download-heading-lvl nil)
+  (org-download-timestamp "%Y%m%d-%H%M%S_")
+  (org-image-actual-width 300)
+  (org-download-screenshot-method "/usr/local/bin/pngpaste %s")
+  :bind
+  ("C-M-y" . org-download-screenshot)
+  :config
+  (require 'org-download))

@@ -43,6 +43,13 @@ gra(){
 ta(){
     tmux attach -t $1
 }
+_startemacs(){
+    return $(emacsclient -c -F "'(fullscreen . maximized)" "$@")
+}
 e(){
-    emacsclient -c -F "'(fullscreen . maximized)" "$@" &
+     _startemacs "$@" || emacs --daemon  && _startemacs "$@"
+}
+gitignoreappend(){
+    echo "$@" >> .gitignore
+
 }
