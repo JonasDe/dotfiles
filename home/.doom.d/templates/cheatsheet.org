@@ -1,0 +1,4 @@
+* TAG: %^{prompt|git|doom|python}
+%?
+
+%i

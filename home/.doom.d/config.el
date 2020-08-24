@@ -44,7 +44,19 @@
                '("f" "File reference" entry
                  (file+headline +org-capture-todo-file "FileReference")
                  "* TODO %?\n :PROPERTIES:\n :CATEGORY: dream\n :END:\n %i\nfile:%F::%(with-current-buffer (org-capture-get :original-buffer) (number-to-string (line-number-at-pos)))"
+                 :prepend t ))
+
+  (add-to-list 'org-capture-templates
+               '("x" "File reference" entry
+                 (file+headline "~/dotfiles/TODO/cheatsheet.org" "Cheatsheet")
+                 "* TODO %?\n :PROPERTIES:\n :CATEGORY: dream\n :END:\n %i\nfile:%F::%(with-current-buffer (org-capture-get :original-buffer) (number-to-string (line-number-at-pos)))"
                  :prepend t )))
+
+  ;; (add-to-list 'org-capture-templates
+  ;;              '("x" "CheatSheet" entry
+  ;;                (file+headline "~/dotfiles/TODO/cheatsheet.org" "Cheatsheet")
+  ;;                (file "~/.doom.d/templates/cheatsheet.org")
+  ;;                :prepend t )))
 
 
 
@@ -92,3 +104,6 @@
   ("C-M-y" . org-download-screenshot)
   :config
   (require 'org-download))
+
+(require 'evil-multiedit)
+(evil-multiedit-default-keybinds)
