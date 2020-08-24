@@ -9,6 +9,9 @@
 (setq user-full-name "John Doe"
       user-mail-address "john@doe.com")
 
+;; Allows jupyter notebook to display inline images
+(setq ein:output-area-inlined-images t)
+
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
@@ -70,6 +73,8 @@
 (define-key evil-normal-state-map (kbd "C-j") #'evil-window-down)
 (define-key evil-normal-state-map (kbd "C-k") #'evil-window-up)
 (define-key evil-normal-state-map (kbd "C-l") #'evil-window-right)
+;; To make window navigation work in treemacs
+(evil-define-key 'treemacs treemacs-mode-map (kbd "C-l") #'evil-window-right)
 
 
 ;; MACOS screenshot
