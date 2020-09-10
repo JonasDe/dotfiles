@@ -47,10 +47,12 @@
                  :prepend t ))
 
   (add-to-list 'org-capture-templates
-               '("x" "File reference" entry
+               '("c" "Cheatsheet" entry
                  (file+headline "~/dotfiles/TODO/cheatsheet.org" "Cheatsheet")
-                 "* TODO %?\n :PROPERTIES:\n :CATEGORY: dream\n :END:\n %i\nfile:%F::%(with-current-buffer (org-capture-get :original-buffer) (number-to-string (line-number-at-pos)))"
-                 :prepend t )))
+                 (file "~/.doom.d/templates/cheatsheet.org"))))
+
+                 ;; "* TODO %?\n :PROPERTIES:\n :CATEGORY: dream\n :END:\n %i\nfile:%F::%(with-current-buffer (org-capture-get :original-buffer) (number-to-string (line-number-at-pos)))"
+                 ;; :prepend t )))
 
   ;; (add-to-list 'org-capture-templates
   ;;              '("x" "CheatSheet" entry

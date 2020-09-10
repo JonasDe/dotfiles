@@ -26,9 +26,13 @@ source "$HOME/.zinit/bin/zinit.zsh"
 
 # Jump around
 turbo_init rupa/z
+turbo_init changyuheng/fz
+turbo_init clvv/fasd
 
 # Fuzzyfind search commandline
 turbo_init junegunn/fzf
+
+turbo_init wfxr/forgit
 
 #zinit load zsh-users/zsh-syntax-highlighting
 #turbo_init zsh-users/zsh-autosuggestions

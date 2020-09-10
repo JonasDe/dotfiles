@@ -225,7 +225,7 @@ _tmux() {
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 }
 cli_utils() {
-  install_as $ARCH $FEDORA $UBUNTU $MAC fd exa htop zsh neovim ripgrep xclip fzf tmux rxvt-unicode bat tldr colordiff glances diff-so-fancy
+  install_as $ARCH $FEDORA $UBUNTU $MAC fd exa htop zsh neovim ripgrep xclip fzf tmux rxvt-unicode bat tldr colordiff glances diff-so-fancy fasd
   install_as $ARCH $FEDORA $UBUNTU jq expac rofi guake rofi-emoji autocutsel
   install_as $ARCH gvim
   install_as $MAC starship lazydocker

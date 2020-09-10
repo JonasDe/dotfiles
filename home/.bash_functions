@@ -53,3 +53,15 @@ gitignoreappend(){
     echo "$@" >> .gitignore
 
 }
+lg(){
+    adb logcat | grep "$@"
+
+}
+murder(){
+    ps aux | grep "$@" | awk '{print $2}' | xargs kill -9
+}
+pa(){
+    ps aux | grep "$@"
+
+}
+
