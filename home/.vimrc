@@ -588,6 +588,8 @@ noremap <C-N> :bn<CR>
 noremap <C-P> :bp<CR>
 nnoremap * mz*`z
 "
+
+noremap  :Commentary<CR>
 " Visual star
 let g:visualstar_extra_commands = 'zzzv'
 

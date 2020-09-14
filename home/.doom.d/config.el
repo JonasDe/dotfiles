@@ -109,3 +109,4 @@
 
 (require 'evil-multiedit)
 (evil-multiedit-default-keybinds)
+(require 'rjsx-mode)

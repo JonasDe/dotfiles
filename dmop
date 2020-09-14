@@ -1,0 +1,621 @@
+--------- beginning of main
+09-10 09:36:26.119  4359  4359 E Security-LocalReporter: category=TrustedAppIntentScope, message=No matching packages available.
+09-10 09:36:26.120  4359  4359 E aloha.DeviceOwnerServiceManager: bindService failed, retry
+09-10 09:36:26.143  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:26.143  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:26.143  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:26.179  2025  2515 W DCFPublishAPI-AndroidManifestCapabilityProvider: Cannot add capabilities for package (com.amazon.alexa.multimodal.falcon); override disabled
+09-10 09:36:26.184  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:26.184  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:26.184  2025  2515 I DCFPublishAPI-AndroidManifestCapabilityProvider: Finished Scanning 136 Packages
+09-10 09:36:26.185  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (21) capabilities ({Alexa.Presentation=interface (Alexa.Presentation) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), NavigationManager=interface (NavigationManager) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), SpeechSynthesizer=interface (SpeechSynthesizer) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.FavoritesController=interface (Alexa.FavoritesController) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.PlaylistController=interface (Alexa.PlaylistController) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), ListRenderer=interface (ListRenderer) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), AudioPlayer=interface (AudioPlayer) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), TemplateRuntime=interface (TemplateRuntime) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), SpeechRecognizer=interface (SpeechRecognizer) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), System=interface (System) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations ({"locales":["en-US","en-GB","de-DE","ja-JP","fr-FR"],"localeSwitch":true}) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.SeekController=interface (Alexa.SeekController) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.Presentation.APL=interface (Alexa.Presentation.APL) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations ({"runtime":{"maxVersion":"1.0"}}) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.PlaybackStateReporter=interface (Alexa.PlaybackStateReporter) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), PlaybackController=interface (PlaybackController) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.PlaybackController=interface (Alexa.PlaybackController) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alerts=interface (Alerts) type (AlexaInterface) version (0.4) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManif
+09-10 09:36:26.186  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:26.186  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:26.186  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:26.186  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (0) capabilities ({}) from provider (DeviceCapabilityStore)
+09-10 09:36:26.186  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:26.186  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:26.186  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:26.186  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (0) capabilities ({}) from provider (DeviceCapabilityStore)
+09-10 09:36:26.186  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:26.187  2025  2515 I chatty  : uid=10057(com.amazon.alexa.multimodal.falcon) pool-24-thread- identical 1 line
+09-10 09:36:26.187  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:26.187  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:26.214  2025  2515 W DCFPublishAPI-AndroidManifestCapabilityProvider: Cannot add capabilities for package (com.amazon.alexa.multimodal.falcon); override disabled
+09-10 09:36:26.217  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:26.218  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:26.218  2025  2515 I DCFPublishAPI-AndroidManifestCapabilityProvider: Finished Scanning 136 Packages
+09-10 09:36:26.218  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (14) legacy flags ([name (SUPPORTS_MIXING_BEHAVIOR_FOR_AUDIO_PLAYER) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_DATAMART_NAMESPACE) value (MMSDK) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SPEECH_SYNTH_SUPPORTS_TTS_URLS) value (false) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_TARGET_PLATFORM) value (TABLET) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_KEYS_IN_HEADER) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_TTS_SPEECHMARKS) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_LYRICS_IN_CARD) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SCREEN_WIDTH) value (1280) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (AUDIO_PLAYER_SUPPORTS_TTS_URLS) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (VOICE_PROFILE_SWITCHING_DISABLED) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_HOME_AUTOMATION) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_SCRUBBING) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_ARBITRATION) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_SECURE_LOCKSCREEN) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider)]) from provider (AndroidManifestCapabilityProvider) client ref (null)
+09-10 09:36:26.218  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:26.219  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (0) legacy flags ([]) from provider (DeviceCapabilityStore) client ref (null)
+09-10 09:36:26.219  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:26.219  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (0) legacy flags ([]) from provider (DeviceCapabilityStore) client ref (null)
+09-10 09:36:26.219  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:26.219  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:26.219  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:26.219  2025  2515 W DCFPublishAPI-DeviceCapabilityStore: capabilities are not yet safe for persisting to cache or file system
+09-10 09:36:26.220  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:26.220  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:26.220  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:26.220  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:26.220  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: (21) changed of (21) new capabilties based on known set of (0)
+09-10 09:36:26.220  2025  2515 I DCFPublishAPI-PublishCapabilitiesTask: Change of (21) interfaces detected
+09-10 09:36:26.220  2025  2515 E ...ntity.auth.device.aa: No account mapping found for any account, returning null
+09-10 09:36:26.221  2025  2515 W DCFPublishAPI-ExternalConditionalTracker: Account Registered (false) Network Connected (true)
+09-10 09:36:26.221  2025  2515 I DCFPublishAPI-PublishCapabilitiesTask: Some external condition has not yet been satisfied
+09-10 09:36:26.221  2025  2515 I DCFPublishAPI-PublishCapabilitiesTask: Will retry publish after (5) seconds
+09-10 09:36:26.262  2025  2037 I ltimodal.falco: Background concurrent copying GC freed 114737(6MB) AllocSpace objects, 30(600KB) LOS objects, 49% free, 8MB/17MB, paused 147us total 110.421ms
+09-10 09:36:26.359  2106  2820 I aloha.PresenceManager: Proxy user found, can start CAMERA_SERVICE.
+09-10 09:36:26.359  2106  2820 I aloha.PrivacyModeManager: isPrivacyModeOn
+09-10 09:36:26.359  1933  1948 I PlatformSecureStateService: Calling pid 2106 does not belong to SYSTEM UID group, check for PLATFORM_SECURESTATE_SDK permission
+09-10 09:36:26.361  2106  2820 I aloha.PrivacyModeManager: isPrivacyModeOn [PRIVACY_ON]
+09-10 09:36:26.771   993   993 I CollectPingData: PING 10.0.0.1 (10.0.0.1) 56(84) bytes of data.
+09-10 09:36:26.772   993   993 I CollectPingData: --- 10.0.0.1 ping statistics ---
+09-10 09:36:26.772   993   993 I CollectPingData: 5 packets transmitted, 5 received, 0% packet loss, time 4007ms
+09-10 09:36:26.772   993   993 I CollectPingData: rtt min/avg/max/mdev = 3.897/16.851/24.539/6.874 ms
+09-10 09:36:26.772   993   993 I CollectPingData: ping command = /vendor/bin/ping -c5 -i1 -q -W1 -w5 1.1.1.1
+09-10 09:36:28.075  6897  6897 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+09-10 09:36:28.131  4359  4359 E Security-LocalReporter: category=TrustedAppIntentScope, message=No matching packages available.
+09-10 09:36:28.132  4359  4359 E aloha.DeviceOwnerServiceManager: bindService failed, retry
+09-10 09:36:28.132  6897  6897 I app_process: The ClassLoaderContext is a special shared library.
+09-10 09:36:28.167  6897  6897 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+09-10 09:36:28.169  6897  6897 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_COMMA, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=250910, downTime=250910, deviceId=-1, source=0x101 }
+09-10 09:36:28.177  6897  6897 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_COMMA, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=250910, downTime=250910, deviceId=-1, source=0x101 }
+09-10 09:36:28.181  6897  6897 D AndroidRuntime: Shutting down VM
+09-10 09:36:28.210   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:28.262   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 10 lines
+09-10 09:36:28.263   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:28.290  5384  5384 W Glide   : Load failed for  with size [72x72]
+09-10 09:36:28.290  5384  5384 W Glide   : class com.bumptech.glide.load.engine.GlideException: Failed to load resource
+09-10 09:36:28.293   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:28.466   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 22 lines
+09-10 09:36:28.467   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:29.898  2025  2499 I SPCH-SIM_AccountRegisteredCondition: isMet
+09-10 09:36:29.898  2025  2499 I SPCH-SIM_AccountRegisteredCondition: Verifying Account Registration
+09-10 09:36:29.898  2025  2499 E ...ntity.auth.device.aa: No account mapping found for any account, returning null
+09-10 09:36:29.899  2025  2499 I SPCH-SIM_SpeechInteractionService: Account Registered Condition Check account (false) available (true)
+09-10 09:36:29.899  2025  2499 I SPCH-SIM_SpeechInteractionService: Account Registered Condition Check Restarting in (60000) ms
+09-10 09:36:30.145  4359  4359 E Security-LocalReporter: category=TrustedAppIntentScope, message=No matching packages available.
+09-10 09:36:30.145  4359  4359 E aloha.DeviceOwnerServiceManager: bindService failed, retry
+09-10 09:36:30.847   993   993 I CollectPingData: PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
+09-10 09:36:30.847   993   993 I CollectPingData: --- 1.1.1.1 ping statistics ---
+09-10 09:36:30.847   993   993 I CollectPingData: 5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+09-10 09:36:30.847   993   993 I CollectPingData: rtt min/avg/max/mdev = 16.888/28.685/35.801/6.560 ms
+09-10 09:36:30.847   993   993 I CollectPingData: ping command = /vendor/bin/ping -c5 -i1 -q -W1 -w5 facebook.com
+09-10 09:36:31.005  2143  3718 I aloha.FbnsConnectionManager: send/keepalive
+09-10 09:36:31.221  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:31.222  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:31.222  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:31.255  2025  2515 W DCFPublishAPI-AndroidManifestCapabilityProvider: Cannot add capabilities for package (com.amazon.alexa.multimodal.falcon); override disabled
+09-10 09:36:31.260  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:31.260  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:31.260  2025  2515 I DCFPublishAPI-AndroidManifestCapabilityProvider: Finished Scanning 136 Packages
+09-10 09:36:31.262  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (21) capabilities ({Alexa.Presentation=interface (Alexa.Presentation) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), NavigationManager=interface (NavigationManager) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), SpeechSynthesizer=interface (SpeechSynthesizer) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.FavoritesController=interface (Alexa.FavoritesController) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.PlaylistController=interface (Alexa.PlaylistController) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), ListRenderer=interface (ListRenderer) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), AudioPlayer=interface (AudioPlayer) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), TemplateRuntime=interface (TemplateRuntime) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), SpeechRecognizer=interface (SpeechRecognizer) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), System=interface (System) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations ({"locales":["en-US","en-GB","de-DE","ja-JP","fr-FR"],"localeSwitch":true}) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.SeekController=interface (Alexa.SeekController) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.Presentation.APL=interface (Alexa.Presentation.APL) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations ({"runtime":{"maxVersion":"1.0"}}) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.PlaybackStateReporter=interface (Alexa.PlaybackStateReporter) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), PlaybackController=interface (PlaybackController) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.PlaybackController=interface (Alexa.PlaybackController) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alerts=interface (Alerts) type (AlexaInterface) version (0.4) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManif
+09-10 09:36:31.262  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:31.262  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:31.262  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:31.262  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (0) capabilities ({}) from provider (DeviceCapabilityStore)
+09-10 09:36:31.262  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:31.262  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:31.262  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:31.263  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (0) capabilities ({}) from provider (DeviceCapabilityStore)
+09-10 09:36:31.263  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:31.263  2025  2515 I chatty  : uid=10057(com.amazon.alexa.multimodal.falcon) pool-24-thread- identical 1 line
+09-10 09:36:31.264  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:31.264  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:31.300  2025  2515 W DCFPublishAPI-AndroidManifestCapabilityProvider: Cannot add capabilities for package (com.amazon.alexa.multimodal.falcon); override disabled
+09-10 09:36:31.305  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:31.305  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:31.305  2025  2515 I DCFPublishAPI-AndroidManifestCapabilityProvider: Finished Scanning 136 Packages
+09-10 09:36:31.306  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (14) legacy flags ([name (SUPPORTS_MIXING_BEHAVIOR_FOR_AUDIO_PLAYER) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_DATAMART_NAMESPACE) value (MMSDK) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SPEECH_SYNTH_SUPPORTS_TTS_URLS) value (false) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_TARGET_PLATFORM) value (TABLET) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_KEYS_IN_HEADER) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_TTS_SPEECHMARKS) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_LYRICS_IN_CARD) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SCREEN_WIDTH) value (1280) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (AUDIO_PLAYER_SUPPORTS_TTS_URLS) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (VOICE_PROFILE_SWITCHING_DISABLED) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_HOME_AUTOMATION) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_SCRUBBING) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_ARBITRATION) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_SECURE_LOCKSCREEN) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider)]) from provider (AndroidManifestCapabilityProvider) client ref (null)
+09-10 09:36:31.306  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:31.306  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (0) legacy flags ([]) from provider (DeviceCapabilityStore) client ref (null)
+09-10 09:36:31.306  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:31.306  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (0) legacy flags ([]) from provider (DeviceCapabilityStore) client ref (null)
+09-10 09:36:31.306  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:31.307  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:31.307  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:31.308  2025  2515 W DCFPublishAPI-DeviceCapabilityStore: capabilities are not yet safe for persisting to cache or file system
+09-10 09:36:31.308  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:31.308  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:31.308  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:31.308  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:31.308  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: (21) changed of (21) new capabilties based on known set of (0)
+09-10 09:36:31.308  2025  2515 I DCFPublishAPI-PublishCapabilitiesTask: Change of (21) interfaces detected
+09-10 09:36:31.309  2025  2515 E ...ntity.auth.device.aa: No account mapping found for any account, returning null
+09-10 09:36:31.309  2025  2515 W DCFPublishAPI-ExternalConditionalTracker: Account Registered (false) Network Connected (true)
+09-10 09:36:31.309  2025  2515 I DCFPublishAPI-PublishCapabilitiesTask: Some external condition has not yet been satisfied
+09-10 09:36:31.309  2025  2515 I DCFPublishAPI-PublishCapabilitiesTask: Will retry publish after (5) seconds
+09-10 09:36:31.383  2106  2820 I aloha.PresenceManager: Proxy user found, can start CAMERA_SERVICE.
+09-10 09:36:31.383  2106  2820 I aloha.PrivacyModeManager: isPrivacyModeOn
+09-10 09:36:31.384  1933  1948 I PlatformSecureStateService: Calling pid 2106 does not belong to SYSTEM UID group, check for PLATFORM_SECURESTATE_SDK permission
+09-10 09:36:31.385  2106  2820 I aloha.PrivacyModeManager: isPrivacyModeOn [PRIVACY_ON]
+09-10 09:36:32.157  4359  4359 E Security-LocalReporter: category=TrustedAppIntentScope, message=No matching packages available.
+09-10 09:36:32.157  4359  4359 E aloha.DeviceOwnerServiceManager: bindService failed, retry
+09-10 09:36:32.826   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:32.928   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 16 lines
+09-10 09:36:32.928   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:32.935  5384  5384 I aloha.AddHouseholdContactsActivity: Selection completed with size: 1
+09-10 09:36:32.935  5384  5384 I aloha.AddHouseholdContactsViewModel: Adding 1 household allowed contacts...
+09-10 09:36:32.937  5384  5384 I aloha.ContactsActionsHelper: Initiating request to perform ADD_HOUSEHOLD_CONTACT action on 0 contacts of contact type: 0
+09-10 09:36:32.937  5384  5384 I aloha.ContactsManager: No contacts to save for type: 0
+09-10 09:36:32.937  5384  5384 D aloha.ContactsActionsHelper: Result not yet ready!
+09-10 09:36:32.939  5384  5384 I aloha.ContactsActionsHelper: Initiating request to perform ADD_HOUSEHOLD_CONTACT action on 1 contacts of contact type: 1
+09-10 09:36:32.939  5384  5384 I aloha.WhatsAppContactsManager: Requesting to save 1 WhatsApp household contacts
+09-10 09:36:32.943   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:32.945   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 1 line
+09-10 09:36:32.945   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:32.962  2175  2175 I aloha.CallHistoryProvider: Loading call history...
+09-10 09:36:32.962  2175  2175 I aloha.CallHistoryProvider: Inside coroutine scope
+09-10 09:36:32.962  2175  6239 I aloha.CallHistoryProvider: Doing load in background
+09-10 09:36:32.962  2175  6239 I aloha.CallHistoryProvider: loadSince -1 
+09-10 09:36:32.976  5384  5384 I aloha.CallHistoryProvider: Loading call history...
+09-10 09:36:32.978  5384  5384 I aloha.WhatsAppContactsManager: 1 WA contacts added to household successfully!
+09-10 09:36:32.979  5384  5384 I aloha.ContactsActionsHelper: Posting result, didError: false, result size: 1
+09-10 09:36:32.980  5384  5384 I aloha.CallHistoryProvider: Inside coroutine scope
+09-10 09:36:32.980  5384  5384 I aloha.AddHouseholdContactsActionsRouter: Successfully completed adding household contacts, finishing activity!
+09-10 09:36:32.980  5384  6132 I aloha.CallHistoryProvider: Doing load in background
+09-10 09:36:32.981  5384  6132 I aloha.CallHistoryProvider: loadSince -1 
+09-10 09:36:32.982  5384  6132 D aloha.HistoryCallLogs: query (subscription_id = '1dc31b63_fbac_4242_8177_652315c91034' OR subscription_id = '100042802771849')
+09-10 09:36:32.982  1106  6066 D ActivityTrigger: ActivityTrigger activityPauseTrigger 
+09-10 09:36:32.985  5384  5384 I aloha.AddHouseholdContactsActionsRouter: Successfully completed adding household contacts, finishing activity!
+09-10 09:36:32.986  5384  5384 D aloha.BackgroundStartupDetector: AddHouseholdContactsActivity paused; mActivityStartCount=1, mActivityResumeCount=0
+09-10 09:36:32.986  5384  5384 D aloha.AppStateLoggerCore: Entity AddHouseholdContactsActivity changed state to ActivityPaused
+--------- beginning of system
+09-10 09:36:32.987  5384  5384 E SchedPolicy: set_timerslack_ns write failed: Operation not permitted
+09-10 09:36:32.987  5384  5384 D aloha.AlohaActivityLifeCycleCallbacks: onActivityPaused: AddHouseholdContactsActivity
+09-10 09:36:32.987  5384  5384 D aloha.AlohaStartupTracker: activityOnPausedBegin activity: com.facebook.alohacommon.contacts.activity.household.AddHouseholdContactsActivity, app: com.facebook.alohaapps.contacts, startupType: NONE
+09-10 09:36:32.988  5384  5384 D aloha.AppStateManager: decreaseActiveActivitiesCount, activeFloatingWindowsCount=0, activeActivitiesCount=0
+09-10 09:36:32.994   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:32.998  1106  2215 D AppUsageAnalytics: package=com.facebook.alohaapps.contacts, state=paused, sessionLength(ms)=48866
+09-10 09:36:32.999  1106  1106 D StatusBarManagerService: no current package and activity on top, return
+09-10 09:36:32.995   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 1 line
+09-10 09:36:32.995   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.004   722   722 W AshmemAllocator: ashmem_create_region(300) returning hidl_memory(0x7cb862c100, 300)
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: Using fallback to get webview version
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: java.lang.ClassNotFoundException: androidx.webkit.WebViewCompat
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: 	at java.lang.Class.classForName(Native Method)
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: 	at java.lang.Class.forName(Class.java:453)
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: 	at java.lang.Class.forName(Class.java:378)
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerCore.getWebViewVersion(AppStateLoggerCore.java:1707)
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.serializeToStream(AppStateLoggerThread.java:765)
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.updateJsonBlob(AppStateLoggerThread.java:706)
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.updateAppState(AppStateLoggerThread.java:804)
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.runImpl(AppStateLoggerThread.java:384)
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.run(AppStateLoggerThread.java:210)
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: Caused by: java.lang.ClassNotFoundException: Didn't find class "androidx.webkit.WebViewCompat" on path: DexPathList[[zip file "/system/framework/org.apache.http.legacy.boot.jar", zip file "/data/app/com.facebook.alohaapps.contacts-bG1ZE_dfaWorWH0xnF6_Tg==/base.apk"],nativeLibraryDirectories=[/data/app/com.facebook.alohaapps.contacts-bG1ZE_dfaWorWH0xnF6_Tg==/lib/arm, /data/app/com.facebook.alohaapps.contacts-bG1ZE_dfaWorWH0xnF6_Tg==/base.apk!/lib/armeabi-v7a, /system/lib]]
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:134)
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+09-10 09:36:33.005  5384  5584 D aloha.AppStateLoggerCore: 	... 9 more
+09-10 09:36:33.007  2143  2730 I aloha.OverlayManagerHelper: Top Activity Changed
+09-10 09:36:33.007  5384  5584 W aloha.AppStateLoggerCore: Failed to get webview version
+09-10 09:36:33.007  5384  5584 W aloha.AppStateLoggerCore: android.content.pm.PackageManager$NameNotFoundException: com.google.android.webview
+09-10 09:36:33.007  5384  5584 W aloha.AppStateLoggerCore: 	at android.app.ApplicationPackageManager.getPackageInfoAsUser(ApplicationPackageManager.java:181)
+09-10 09:36:33.007  5384  5584 W aloha.AppStateLoggerCore: 	at android.app.ApplicationPackageManager.getPackageInfo(ApplicationPackageManager.java:152)
+09-10 09:36:33.007  5384  5584 W aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerCore.getWebViewVersion(AppStateLoggerCore.java:1723)
+09-10 09:36:33.007  5384  5584 W aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.serializeToStream(AppStateLoggerThread.java:765)
+09-10 09:36:33.007  5384  5584 W aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.updateJsonBlob(AppStateLoggerThread.java:706)
+09-10 09:36:33.007  5384  5584 W aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.updateAppState(AppStateLoggerThread.java:804)
+09-10 09:36:33.007  5384  5584 W aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.runImpl(AppStateLoggerThread.java:384)
+09-10 09:36:33.007  5384  5584 W aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.run(AppStateLoggerThread.java:210)
+09-10 09:36:33.007  2280  2280 I aloha.UserPresenceAppStateHelper: top activity changed
+09-10 09:36:33.007  2280  3241 I aloha.UserPresenceManager: COMMAND_TOP_APP_UPATED
+09-10 09:36:33.008  2280  3241 I aloha.UserPresenceManager: updateAvailability
+09-10 09:36:33.009   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.011   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.011  2106  2820 I aloha.AppStateContentProvider: Top activity set [com.facebook.alohaapps.contacts/com.facebook.aloha.app.contacts.activities.landing.AlohaContactsMainActivity]
+09-10 09:36:33.011   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.011  2106  2820 I aloha.WindowStateReporter: topActivity set [com.facebook.alohaapps.contacts/com.facebook.aloha.app.contacts.activities.landing.AlohaContactsMainActivity]
+09-10 09:36:33.012  2280  2280 I aloha.UserPresenceAppStateHelper: top activity changed
+09-10 09:36:33.012  2280  2280 I aloha.UserPresenceAppStateHelper: top activity changed
+09-10 09:36:33.014  2175  2175 I aloha.CallHistoryProvider: Call History load successful
+09-10 09:36:33.015  2175  2175 I aloha.Orchestrator: Adding task CallHistoryChangeUpdateTask - count = 1
+09-10 09:36:33.015  2175  2175 I aloha.Orchestrator: Removing task CallHistoryChangeUpdateTask - count = 0
+09-10 09:36:33.019  5384  5584 D aloha.AppStateLoggerThread: Dumped app state in memory to file
+09-10 09:36:33.019  5384  5384 D aloha.BackgroundStartupDetector: AlohaContactsMainActivity started; mActivityStartCount=2, mActivityResumeCount=0
+09-10 09:36:33.019  5384  5384 D aloha.AppStateLoggerCore: Entity AlohaContactsMainActivity changed state to ActivityStarted
+09-10 09:36:33.020  5384  5384 D aloha.AlohaActivityLifeCycleCallbacks: onActivityStarted: AlohaContactsMainActivity
+09-10 09:36:33.020  5384  5384 D aloha.AlohaStartupTracker: activityOnStartBegin activity: com.facebook.aloha.app.contacts.activities.landing.AlohaContactsMainActivity, app: com.facebook.alohaapps.contacts, startupType: NONE
+09-10 09:36:33.027  2280  3247 I aloha.SettingConverter: setting not present, return default : false
+09-10 09:36:33.038  2143  2730 I aloha.AlohaForegroundAppContext: doInit.ContentObserver.onChange: top activity changed
+09-10 09:36:33.040  5384  5384 D aloha.MobileConfigClientDataLogger: Function name: getBoolean params portal_home_contacts:portal_calling_funnel_logging success true extra SERVER
+09-10 09:36:33.041  5384  5384 D aloha.MobileConfigServiceInteropClient: getLatestBoolean: alohaMCKey: portal_calling_funnel_logging, value: true, source: SERVER
+09-10 09:36:33.044  2106  3350 I aloha.AppStateContentProvider: get call_attributes in_call[false] id[null] private[false] disable_conflict[false] calltype[null] call_environment_type[null]
+09-10 09:36:33.047  2143  2730 I aloha.AlohaForegroundAppContext: updateForegroundApp: foreground app is com.facebook.alohaapps.contacts/com.facebook.aloha.app.contacts.activities.landing.AlohaContactsMainActivity
+09-10 09:36:33.048  2143  4013 E aloha.AlohaCallStateObserver: getCallProvider: call attributes null or call type null
+09-10 09:36:33.053  5384  5384 D aloha.MobileConfigClientDataLogger: Function name: getBoolean params portal_home_contacts:portal_calling_funnel_logging success true extra SERVER
+09-10 09:36:33.053  5384  5384 D aloha.MobileConfigServiceInteropClient: getLatestBoolean: alohaMCKey: portal_calling_funnel_logging, value: true, source: SERVER
+09-10 09:36:33.053  5384  5384 D aloha.CallingExperienceFunnel: send event to funnel logger
+09-10 09:36:33.055  2280  3241 I aloha.UserPresenceAppStateHelper: isWhitelistedAppsBasedAvailabilityEnabled [true]
+09-10 09:36:33.060  2106  2133 I aloha.CallingExperienceFunnelLogger: Start funnel if not started
+09-10 09:36:33.071  5384  5384 D aloha.MobileConfigClientDataLogger: Function name: getBoolean params portal_home_contacts:portal_calling_funnel_logging success true extra SERVER
+09-10 09:36:33.072  5384  5384 D aloha.MobileConfigServiceInteropClient: getLatestBoolean: alohaMCKey: portal_calling_funnel_logging, value: true, source: SERVER
+09-10 09:36:33.073  2280  3247 I aloha.SettingConverter: setting not present, return default : true
+09-10 09:36:33.077  2280  2280 I aloha.AlohaAvailabilityService: Owner availability change
+09-10 09:36:33.077  2280  3241 I aloha.UserPresenceManager: updateOwnersTable [106102267905549] [false]
+09-10 09:36:33.077  2280  3241 I aloha.UserPresenceManager: [userid=499208208 av=IDLE av_src=2 ts=255804]
+09-10 09:36:33.078  2280  6778 I aloha.AccountManagerUtils: Is v2 database enabled [true]
+09-10 09:36:33.078  2280  6778 I aloha.AccountManagerUtils: result [true]
+09-10 09:36:33.080  2280  6778 I aloha.JACKSON_FALLBACK: Using com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccountDeSerializer@35520c to deserialize [simple type, class com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccount]
+09-10 09:36:33.083  5384  5384 D aloha.MobileConfigClientDataLogger: Function name: getBoolean params portal_home_contacts:portal_calling_funnel_logging success true extra SERVER
+09-10 09:36:33.083  5384  5384 D aloha.MobileConfigServiceInteropClient: getLatestBoolean: alohaMCKey: portal_calling_funnel_logging, value: true, source: SERVER
+09-10 09:36:33.087  2280  3247 I aloha.SettingConverter: setting not present, return default : true
+09-10 09:36:33.092   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.093   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 2 lines
+09-10 09:36:33.093   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.094  2280  3241 I aloha.UserPresenceManager: updateOwnersTable [105526011296508] [true]
+09-10 09:36:33.094  2280  3241 I aloha.UserPresenceManager: [userid=100042802771849 av=ONLINE av_src=2 ts=255804]
+09-10 09:36:33.094  2280  3241 I aloha.UserPresenceManager: COMMAND_TOP_APP_UPATED
+09-10 09:36:33.094  2280  2280 I aloha.AlohaAvailabilityService: Owner availability change
+09-10 09:36:33.094  2280  3241 I aloha.UserPresenceManager: updateAvailability
+09-10 09:36:33.094   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.095   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.095  5384  5384 D aloha.MobileConfigClientDataLogger: Function name: getBoolean params portal_home_contacts:portal_calling_funnel_logging success true extra SERVER
+09-10 09:36:33.095  5384  5384 D aloha.MobileConfigServiceInteropClient: getLatestBoolean: alohaMCKey: portal_calling_funnel_logging, value: true, source: SERVER
+09-10 09:36:33.095  5384  5384 D aloha.CallingExperienceFunnel: logViewContactsTab(FAVORITES)
+09-10 09:36:33.095  5384  5384 D aloha.CallingExperienceFunnel: send event to funnel logger
+09-10 09:36:33.100  2280  6778 I aloha.AccountManagerUtils: Is v2 database enabled [true]
+09-10 09:36:33.100  2280  6778 I aloha.AccountManagerUtils: result [true]
+09-10 09:36:33.101  2280  6778 I aloha.JACKSON_FALLBACK: Using com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccountDeSerializer@35520c to deserialize [simple type, class com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccount]
+09-10 09:36:33.106  2280  3247 I aloha.SettingConverter: setting not present, return default : false
+09-10 09:36:33.107  2106  2133 I aloha.CallingExperienceFunnelLogger: Log event: b8_aloha_view_contacts_tab_event
+09-10 09:36:33.113  5384  5384 D aloha.ContactsMainActivity: Handling Global Picker Owner callback
+09-10 09:36:33.113  5384  5384 I aloha.ContactsMainActivity: Received the same Owner Config
+09-10 09:36:33.114  5384  5384 I aloha.FavoriteContactsViewModel: Received request to fetch FAVORITE contacts...
+09-10 09:36:33.114  5384  5384 D aloha.ContactListTypeHelper: Assigning resultLiveDataMap to repo.contactListTypeLiveData
+09-10 09:36:33.114  5384  5384 D aloha.ContactListTypeHelper: Assigning resultLiveDataMap to repo.contactListTypeLiveData
+09-10 09:36:33.115  5384  5384 D aloha.FacebookMessengerContactsRepo: Loading favorited Facebook contacts...
+09-10 09:36:33.116  5384  6132 I aloha.AlohaContactsProviderManager: Querying content resolver for fb favorites load
+09-10 09:36:33.116  5384  6136 I aloha.AlohaWhatsappFavoritesProviderManager: Querying content resolver for wa favorites load
+09-10 09:36:33.127  2280  3241 I aloha.UserPresenceAppStateHelper: isWhitelistedAppsBasedAvailabilityEnabled [true]
+09-10 09:36:33.128  5384  6132 I aloha.AlohaContactsProviderManager: Favorites load query complete
+09-10 09:36:33.129  5384  6132 I aloha.AlohaContactsProviderManager: Favorites load cursor nonnull
+09-10 09:36:33.131  5384  6136 I aloha.AlohaWhatsappFavoritesProviderManager: Favorites load query complete
+09-10 09:36:33.132  5384  6136 I aloha.AlohaWhatsappFavoritesProviderManager: Favorites load cursor nonnull
+09-10 09:36:33.135  5384  5384 I aloha.JACKSON_FALLBACK: Using com.facebook.alohacommon.users.data.models.AlohaHouseholdDeSerializer@d521c65 to deserialize [simple type, class com.facebook.alohacommon.users.data.models.AlohaHousehold]
+09-10 09:36:33.137  5384  5384 I aloha.FavoriteContactsViewModel: Received request to fetch HOUSEHOLD contacts...
+09-10 09:36:33.137  5384  5384 D aloha.ContactListTypeHelper: Assigning resultLiveDataMap to repo.householdAllowListData
+09-10 09:36:33.137  5384  5384 D aloha.ContactListTypeHelper: Assigning resultLiveDataMap to repo.householdAllowListData
+09-10 09:36:33.138  5384  5384 D aloha.FacebookMessengerContactsRepo: Loading allowed household contacts...
+09-10 09:36:33.140  5384  5384 D aloha.ContactListTypeHelper: List type result not yet ready!
+09-10 09:36:33.141  5384  5384 D aloha.ContactListTypeHelper: List type result not yet ready!
+09-10 09:36:33.146  2280  3247 I aloha.SettingConverter: setting not present, return default : true
+09-10 09:36:33.150  2280  2280 I aloha.AlohaAvailabilityService: Owner availability change
+09-10 09:36:33.151  2280  3241 I aloha.UserPresenceManager: updateOwnersTable [106102267905549] [false]
+09-10 09:36:33.151  2280  3241 I aloha.UserPresenceManager: [userid=499208208 av=IDLE av_src=2 ts=255877]
+09-10 09:36:33.151  2280  6778 I aloha.AccountManagerUtils: Is v2 database enabled [true]
+09-10 09:36:33.151  2280  6778 I aloha.AccountManagerUtils: result [true]
+09-10 09:36:33.153  2280  6778 I aloha.JACKSON_FALLBACK: Using com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccountDeSerializer@35520c to deserialize [simple type, class com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccount]
+09-10 09:36:33.156  5384  5384 I aloha.JACKSON_FALLBACK: Using com.facebook.alohacommon.users.data.models.AlohaHouseholdDeSerializer@d521c65 to deserialize [simple type, class com.facebook.alohacommon.users.data.models.AlohaHousehold]
+09-10 09:36:33.160  2280  3247 I aloha.SettingConverter: setting not present, return default : true
+09-10 09:36:33.161  5384  5384 D aloha.ContactListTypeHelper: List type result not yet ready!
+09-10 09:36:33.161  5384  5384 D aloha.ContactListTypeHelper: List type result not yet ready!
+09-10 09:36:33.164  2280  2280 I aloha.AlohaAvailabilityService: Owner availability change
+09-10 09:36:33.164  2280  3241 I aloha.UserPresenceManager: updateOwnersTable [105526011296508] [true]
+09-10 09:36:33.164  2280  3241 I aloha.UserPresenceManager: [userid=100042802771849 av=ONLINE av_src=2 ts=255877]
+09-10 09:36:33.164  2280  3241 I aloha.UserPresenceManager: COMMAND_TOP_APP_UPATED
+09-10 09:36:33.165  2280  3241 I aloha.UserPresenceManager: updateAvailability
+09-10 09:36:33.169  2280  6780 I aloha.AccountManagerUtils: Is v2 database enabled [true]
+09-10 09:36:33.169  2280  6780 I aloha.AccountManagerUtils: result [true]
+09-10 09:36:33.170  2280  6780 I aloha.JACKSON_FALLBACK: Using com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccountDeSerializer@35520c to deserialize [simple type, class com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccount]
+09-10 09:36:33.173  5384  5384 I aloha.JACKSON_FALLBACK: Using com.facebook.alohacommon.users.data.models.AlohaHouseholdDeSerializer@d521c65 to deserialize [simple type, class com.facebook.alohacommon.users.data.models.AlohaHousehold]
+09-10 09:36:33.178  2280  3247 I aloha.SettingConverter: setting not present, return default : false
+09-10 09:36:33.178  5384  5384 I aloha.ContactsViewModel: requesting contacts data for use-case: SUGGESTED
+09-10 09:36:33.178  5384  5384 D aloha.FacebookMessengerContactsRepo: Loading suggested contacts with config ReadContactConfig(readFromNetwork=false, excludeFavorites=false, excludeOwners=false, excludeHousehold=false)
+09-10 09:36:33.180  5384  5384 I aloha.ContactsViewModel: requesting contacts data for use-case: ALL_CONTACTS
+09-10 09:36:33.180  5384  5384 D aloha.FacebookMessengerContactsRepo: Loading all contacts with config ReadContactConfig(readFromNetwork=false, excludeFavorites=false, excludeOwners=false, excludeHousehold=false)
+09-10 09:36:33.187  5384  5384 D aloha.SearchContactsViewModel: No value passed for search query, returning early...
+09-10 09:36:33.188  5384  5384 D aloha.BackgroundStartupDetector: AlohaContactsMainActivity resumed; mActivityStartCount=2, mActivityResumeCount=1
+09-10 09:36:33.188  5384  5384 D aloha.AppStateLoggerCore: Entity AlohaContactsMainActivity changed state to ActivityResumed
+09-10 09:36:33.189  5384  5384 D aloha.AlohaActivityLifeCycleCallbacks: onActivityResumed: AlohaContactsMainActivity
+09-10 09:36:33.189  5384  5384 D aloha.AlohaStartupTracker: activityOnResumeBegin activity: com.facebook.aloha.app.contacts.activities.landing.AlohaContactsMainActivity, app: com.facebook.alohaapps.contacts, startupType: NONE
+09-10 09:36:33.190  5384  5384 D aloha.AppStateManager: increaseActiveActivitiesCount, activeFloatingWindowsCount=0, activeActivitiesCount=1
+09-10 09:36:33.193  5384  5384 I aloha.AnalyticsManagerWrapper: screen name updated: contacts
+09-10 09:36:33.195  5384  5384 D aloha.AnalyticsManagerWrapper: logging event - name: b8_aloha_contacts_actions
+09-10 09:36:33.196  1106  6066 D StatusBarManagerService: updateStatusBar() com.facebook.alohaapps.contacts true, true, false
+09-10 09:36:33.196  1106  6066 D StatusBarManagerService: current package: null
+09-10 09:36:33.196  1106  6066 D StatusBarManagerService: com.facebook.alohaapps.contacts is in the background, not update the status immediately
+09-10 09:36:33.199  5384  5621 I aloha.AccountManagerUtils: Is v2 database enabled [true]
+09-10 09:36:33.199  5384  5621 I aloha.AccountManagerUtils: result [true]
+09-10 09:36:33.201  5384  5384 D Glide   : Finished loading BitmapDrawable from MEMORY_CACHE for https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-1/fr/cp0/e15/q65/86802891_173813854055373_6376182540675317760_n.jpg?_nc_cat=109&_nc_sid=7206a8&_nc_ohc=OLGgbEpp_gEAX8Qfxoq&_nc_ht=scontent-sjc3-1.xx&tp=14&oh=88a5486be2630327084718ee01cd187f&oe=5F80F952 with size [96x96] in 0.15104199999999998 ms
+09-10 09:36:33.202  1106  2213 D StatusBarManagerService: onActivityResumed() com.facebook.alohaapps.contacts, com.facebook.aloha.app.contacts.activities.landing.AlohaContactsMainActivity
+09-10 09:36:33.202  1106  2213 D StatusBarManagerService: update package to com.facebook.alohaapps.contacts
+09-10 09:36:33.202  1106  2213 D StatusBarManagerService: update activity to com.facebook.aloha.app.contacts.activities.landing.AlohaContactsMainActivity
+09-10 09:36:33.202  1106  2213 D AppUsageAnalytics: package=com.facebook.alohaapps.contacts, state=resumed, sessionLength(ms)=null
+09-10 09:36:33.205   722   722 W AshmemAllocator: ashmem_create_region(248) returning hidl_memory(0x7cb862c100, 248)
+09-10 09:36:33.207  2280  3241 I aloha.UserPresenceAppStateHelper: isWhitelistedAppsBasedAvailabilityEnabled [true]
+09-10 09:36:33.215  5384  5621 I aloha.JACKSON_FALLBACK: Using com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccountDeSerializer@7c7457f to deserialize [simple type, class com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccount]
+09-10 09:36:33.216  5384  5621 I chatty  : uid=10051(com.facebook.alohaapps.contacts) CombinedTP7 identical 1 line
+09-10 09:36:33.217  5384  5621 I aloha.JACKSON_FALLBACK: Using com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccountDeSerializer@7c7457f to deserialize [simple type, class com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccount]
+09-10 09:36:33.217  1394  1394 D StatusBar: setSystemUiVisibility vis=528 mask=ffffffff oldVal=8 newVal=528 diff=520
+09-10 09:36:33.217  1394  1394 V StatusBar: defineSlots
+09-10 09:36:33.223  5384  5384 D Glide   : Finished loading BitmapDrawable from MEMORY_CACHE for https://scontent-sjc3-1.xx.fbcdn.net/v/t31.0-1/p960x960/22137298_10155352506293876_1985345466970222439_o.jpg?_nc_cat=101&_nc_sid=7206a8&_nc_ohc=DLU-smsMbAUAX_sxpzS&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-sjc3-1.xx&tp=6&oh=5652e65feb02c919bd248248c1bbb95a&oe=5F804A48 with size [96x96] in 0.28875 ms
+09-10 09:36:33.226  2280  3247 I aloha.SettingConverter: setting not present, return default : true
+09-10 09:36:33.226   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.228   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 1 line
+09-10 09:36:33.228   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.232  2280  3241 I aloha.UserPresenceManager: updateOwnersTable [106102267905549] [false]
+09-10 09:36:33.232  2280  3241 I aloha.UserPresenceManager: [userid=499208208 av=IDLE av_src=2 ts=255959]
+09-10 09:36:33.233  2280  2280 I aloha.AlohaAvailabilityService: Owner availability change
+09-10 09:36:33.237  2280  6780 I aloha.AccountManagerUtils: Is v2 database enabled [true]
+09-10 09:36:33.237  2280  6780 I aloha.AccountManagerUtils: result [true]
+09-10 09:36:33.238  2280  6780 I aloha.JACKSON_FALLBACK: Using com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccountDeSerializer@35520c to deserialize [simple type, class com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccount]
+09-10 09:36:33.242  5384  5384 I aloha.CallHistoryProvider: Call History load successful
+09-10 09:36:33.242  5384  5384 I aloha.CallHistoryRepo: Update with 0 Call Logs received.
+09-10 09:36:33.243   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.244  5384  5609 D aloha.ProxyUserAsyncBuilderUpdater: Proxy user is loaded: 100054866873084
+09-10 09:36:33.244  5384  5609 D aloha.OwnerAsyncBuilderUpdater: Adding current device owners [[AlohaDeviceOwner{deviceOwnerId=106102267905549, isEmployee=false, accessMode=OWNER_MODE, ownerState=UNIDENTIFIED, Accounts : =
+09-10 09:36:33.244  5384  5609 D aloha.OwnerAsyncBuilderUpdater: , AlohaDeviceOwnerAccount{UserId=499208208, DisplayName=AlohaAudioOne, ShortName=AlohaAudioOne, Availability=0, AccountType=FACEBOOK, OwnershipStatus=VALID, ProfilePicUri=hidden_non_empty_url}}, AlohaDeviceOwner{deviceOwnerId=105526011296508, isEmployee=false, accessMode=OWNER_MODE, ownerState=UNIDENTIFIED, Accounts : =
+09-10 09:36:33.244  5384  5609 D aloha.OwnerAsyncBuilderUpdater: , AlohaDeviceOwnerAccount{UserId=100042802771849, DisplayName=Jonas Danebjer, ShortName=Jonas, Availability=1, AccountType=FACEBOOK, OwnershipStatus=VALID, ProfilePicUri=hidden_non_empty_url}, AlohaDeviceOwnerAccount{UserId=1dc31b63_fbac_4242_8177_652315c91034, DisplayName=Hojo, ShortName=null, Availability=0, AccountType=WHATSAPP, OwnershipStatus=VALID, ProfilePicUri=hidden_non_empty_url}}]]
+09-10 09:36:33.244   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager: logEventImpl: logging current device owner [105526011296508]
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager: logEventImpl: logging access mode [OWNER_ACCESS]
+09-10 09:36:33.245   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager: Analytics Event: 
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager: Event Name: navigation
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager: Module Name: null
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager: Extras: 
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager:   - app_version: 181.0.0.0.80
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager:   - build_num: 999999999
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager:   - device_fingerprint: aloha_prod-userdebug 9 PKQ1.191202.001 1040137300000060
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager:   - device_serial_number: 818PGF01L0802W21
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager:   - device_type: ohana
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager:   - dest_module_class: com.facebook.aloha.app.contacts.activities.landing.AlohaContactsMainActivity
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager:   - proxy_userid: 100054866873084
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager:   - aloha_id: 102022561650051
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager:   - device_owners_fbuid: [106102267905549,105526011296508]
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager:   - checked_in_users_fbuid: 105526011296508
+09-10 09:36:33.245  5384  5609 D aloha.AlohaAnalyticsManager:   - access_mode: OWNER_ACCESS
+09-10 09:36:33.246  5384  5609 D aloha.ProxyUserAsyncBuilderUpdater: Proxy user is loaded: 100054866873084
+09-10 09:36:33.246  5384  5384 I aloha.WhatsAppContactsRepo: Successfully loaded 2 favorites
+09-10 09:36:33.246  5384  5609 D aloha.OwnerAsyncBuilderUpdater: Adding current device owners [[AlohaDeviceOwner{deviceOwnerId=106102267905549, isEmployee=false, accessMode=OWNER_MODE, ownerState=UNIDENTIFIED, Accounts : =
+09-10 09:36:33.246  5384  5609 D aloha.OwnerAsyncBuilderUpdater: , AlohaDeviceOwnerAccount{UserId=499208208, DisplayName=AlohaAudioOne, ShortName=AlohaAudioOne, Availability=0, AccountType=FACEBOOK, OwnershipStatus=VALID, ProfilePicUri=hidden_non_empty_url}}, AlohaDeviceOwner{deviceOwnerId=105526011296508, isEmployee=false, accessMode=OWNER_MODE, ownerState=UNIDENTIFIED, Accounts : =
+09-10 09:36:33.246  5384  5609 D aloha.OwnerAsyncBuilderUpdater: , AlohaDeviceOwnerAccount{UserId=100042802771849, DisplayName=Jonas Danebjer, ShortName=Jonas, Availability=1, AccountType=FACEBOOK, OwnershipStatus=VALID, ProfilePicUri=hidden_non_empty_url}, AlohaDeviceOwnerAccount{UserId=1dc31b63_fbac_4242_8177_652315c91034, DisplayName=Hojo, ShortName=null, Availability=0, AccountType=WHATSAPP, OwnershipStatus=VALID, ProfilePicUri=hidden_non_empty_url}}]]
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager: logEventImpl: logging current device owner [105526011296508]
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager: logEventImpl: logging access mode [OWNER_ACCESS]
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager: Analytics Event: 
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager: Event Name: b8_aloha_contacts_actions
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager: Module Name: com.facebook.alohaapps.contacts
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager: Extras: 
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - app_version: 181.0.0.0.80
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - build_num: 999999999
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - device_fingerprint: aloha_prod-userdebug 9 PKQ1.191202.001 1040137300000060
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - device_serial_number: 818PGF01L0802W21
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - device_type: ohana
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - session_id: 26ba912b-2147-461a-99f5-a1ae35b7874c
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - event_type: navigation
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - target: contacts_foreground
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - screen_name: contacts
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - proxy_userid: 100054866873084
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - aloha_id: 102022561650051
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - device_owners_fbuid: [106102267905549,105526011296508]
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - checked_in_users_fbuid: 105526011296508
+09-10 09:36:33.247  5384  5609 D aloha.AlohaAnalyticsManager:   - access_mode: OWNER_ACCESS
+09-10 09:36:33.248  5384  5384 I aloha.FacebookMessengerContactsRepo: Successfully Loaded 1 favorite contacts
+09-10 09:36:33.248  5384  5384 I aloha.WhatsAppContactsRepo: Successfully loaded 1 hidden contacts
+09-10 09:36:33.248  5384  5384 I aloha.FacebookMessengerContactsRepo: Successfully Loaded household contacts
+09-10 09:36:33.250  5384  5384 I aloha.WhatsAppContactsRepo: Successfully loaded 4 contacts
+09-10 09:36:33.251  2280  3247 I aloha.SettingConverter: setting not present, return default : true
+09-10 09:36:33.253  2280  3241 I aloha.UserPresenceManager: updateOwnersTable [105526011296508] [true]
+09-10 09:36:33.253  2280  3241 I aloha.UserPresenceManager: [userid=100042802771849 av=ONLINE av_src=2 ts=255959]
+09-10 09:36:33.255  2280  2280 I aloha.AlohaAvailabilityService: Owner availability change
+09-10 09:36:33.256  5384  5384 I aloha.WhatsAppContactsRepo: Successfully loaded 4 contacts
+09-10 09:36:33.257  5384  6127 D aloha.MobileConfigClientDataLogger: Function name: getBoolean params portal_home_contacts:portal_contacts_condensed_call_log success true extra SERVER
+09-10 09:36:33.257  5384  6127 D aloha.MobileConfigServiceInteropClient: getLatestBoolean: alohaMCKey: portal_contacts_condensed_call_log, value: false, source: SERVER
+09-10 09:36:33.257  2280  6471 I aloha.AvailabilityRingabilityPoster: isRingabilityPosterDisabled [true]
+09-10 09:36:33.257  2280  6471 I aloha.UserPresenceManager: av/ri successfully posted
+09-10 09:36:33.258  2280  3241 I aloha.UserPresenceManager: www Pending Sync complete
+09-10 09:36:33.259  2280  6780 I aloha.AccountManagerUtils: Is v2 database enabled [true]
+09-10 09:36:33.259  2280  6780 I aloha.AccountManagerUtils: result [true]
+09-10 09:36:33.260  2280  6780 I aloha.JACKSON_FALLBACK: Using com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccountDeSerializer@35520c to deserialize [simple type, class com.facebook.alohacommon.users.data.models.AlohaDeviceOwnerAccount]
+09-10 09:36:33.276  5384  5384 I aloha.FacebookMessengerContactsRepo: Successfully Loaded 11 suggested contacts
+09-10 09:36:33.276   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.277  5384  5384 I aloha.FacebookMessengerContactsRepo: Successfully Loaded 11 contacts
+09-10 09:36:33.278   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.278   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 1 line
+09-10 09:36:33.285   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.293  5384  5384 D aloha.ContactListTypeHelper: List type result not yet ready!
+09-10 09:36:33.293  5384  5384 D aloha.ContactListTypeHelper: Adding 1 contacts for contact type 0
+09-10 09:36:33.293  5384  5384 D aloha.ContactListTypeHelper: Adding 2 contacts for contact type 1
+09-10 09:36:33.293  5384  5384 I aloha.ContactListTypeHelper: Posting result, didError: false
+09-10 09:36:33.293  5384  5384 D aloha.ContactListTypeHelper: List type result not yet ready!
+09-10 09:36:33.293  5384  5384 D aloha.ContactListTypeHelper: Adding 2 contacts for contact type 0
+09-10 09:36:33.294  5384  5384 D aloha.ContactListTypeHelper: Adding 1 contacts for contact type 1
+09-10 09:36:33.294  5384  5384 I aloha.ContactListTypeHelper: Posting result, didError: false
+09-10 09:36:33.294   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.328   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 9 lines
+09-10 09:36:33.329   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.336  5384  5384 I aloha.JACKSON_FALLBACK: Using com.facebook.alohacommon.users.data.models.AlohaHouseholdDeSerializer@d521c65 to deserialize [simple type, class com.facebook.alohacommon.users.data.models.AlohaHousehold]
+09-10 09:36:33.344   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.345   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 2 lines
+09-10 09:36:33.345   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.346  5384  5384 I aloha.JACKSON_FALLBACK: Using com.facebook.alohacommon.users.data.models.AlohaHouseholdDeSerializer@d521c65 to deserialize [simple type, class com.facebook.alohacommon.users.data.models.AlohaHousehold]
+09-10 09:36:33.361   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.378   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 6 lines
+09-10 09:36:33.378   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.381  5384  5384 D Glide   : Finished loading BitmapDrawable from MEMORY_CACHE for https://pps.whatsapp.net/v/t61.24694-24/66056920_910993522603665_9005993339593424896_n.jpg?oh=7be633d5ac9812332c2a2c376833c620&oe=5F5F394C with size [96x96] in 0.336615 ms
+09-10 09:36:33.395   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.401  1106  1106 D StatusBarManagerService: notifyBar() com.facebook.alohaapps.contacts, com.facebook.aloha.app.contacts.activities.landing.AlohaContactsMainActivity true, true, false
+09-10 09:36:33.395   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 2 lines
+09-10 09:36:33.396   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.403  1394  1394 D StatusBarAlohaController: dump status bar status button visibility: 
+09-10 09:36:33.403  1394  1394 D StatusBarAlohaController: Expected: Back-true, Home-true, Dream-false
+09-10 09:36:33.403  1394  1394 D StatusBarAlohaController: Real Visibility: Back-true, Home-true, Dream-false
+09-10 09:36:33.409   722   722 W AshmemAllocator: ashmem_create_region(140) returning hidl_memory(0x7cb862c100, 140)
+09-10 09:36:33.414   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.513   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 26 lines
+09-10 09:36:33.513   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.520  6921  6921 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+09-10 09:36:33.528   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.529   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 2 lines
+09-10 09:36:33.529   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.535   861  1072 D fw-diag : Mobile configuration:
+09-10 09:36:33.535   861  1072 D fw-diag :   user_agent = 
+09-10 09:36:33.535   861  1072 D fw-diag :   log_scan_interval_sec = 1
+09-10 09:36:33.535   861  1072 D fw-diag :   file_send_interval_sec = 15
+09-10 09:36:33.535   861  1072 D fw-diag :   max_log_size_bytes = 2097152
+09-10 09:36:33.535   861  1072 D fw-diag :   max_storage_size_mbytes = 20
+09-10 09:36:33.535   861  1072 D fw-diag :   is_enabled = 0
+09-10 09:36:33.535   861  1072 D fw-diag :   collect_main_logs = 1
+09-10 09:36:33.535   861  1072 D fw-diag :   collect_kernel_logs = 1
+09-10 09:36:33.535   861  1072 D fw-diag :   collect_events_logs = 0
+09-10 09:36:33.535   861  1072 D fw-diag :   collect_system_logs = 1
+09-10 09:36:33.535   861  1072 D fw-diag :   collect_crash_logs = 0
+09-10 09:36:33.535   861  1072 D fw-diag :   collect_sequrity_logs = 0
+09-10 09:36:33.535   861  1074 D fw-diag : Service is disabled
+09-10 09:36:33.545   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.576  1106  1269 V WindowManager: Got dream target window: Window{fc4d2fa u0 com.facebook.alohaapps.contacts/com.facebook.aloha.app.contacts.activities.landing.AlohaContactsMainActivity}
+09-10 09:36:33.563   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 6 lines
+09-10 09:36:33.563   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.577   763  1173 W SurfaceFlinger: Attempting to set client state on removed layer: Surface(name=AppWindowToken{9dd8f54 token=Token{f274ea7 ActivityRecord{4dbfb66 u0 com.facebook.alohaapps.contacts/com.facebook.aloha.app.contacts.activities.landing.AlohaContactsMainActivity t72}}})/@0x6c3d9a3 - animation-leash#0
+09-10 09:36:33.577  6921  6921 I app_process: The ClassLoaderContext is a special shared library.
+09-10 09:36:33.577   763  1173 W SurfaceFlinger: Attempting to set client state on removed layer: Surface(name=AppWindowToken{eac4db4 token=Token{da8a87 ActivityRecord{d693ac6 u0 com.facebook.alohaapps.contacts/com.facebook.alohacommon.contacts.activity.household.AddHouseholdContactsActivity t77}}})/@0x4702b95 - animation-leash#0
+09-10 09:36:33.577   763  1173 W SurfaceFlinger: Attempting to destroy on removed layer: Surface(name=AppWindowToken{9dd8f54 token=Token{f274ea7 ActivityRecord{4dbfb66 u0 com.facebook.alohaapps.contacts/com.facebook.aloha.app.contacts.activities.landing.AlohaContactsMainActivity t72}}})/@0x6c3d9a3 - animation-leash#0
+09-10 09:36:33.577   763  1173 W SurfaceFlinger: Attempting to destroy on removed layer: Surface(name=AppWindowToken{eac4db4 token=Token{da8a87 ActivityRecord{d693ac6 u0 com.facebook.alohaapps.contacts/com.facebook.alohacommon.contacts.activity.household.AddHouseholdContactsActivity t77}}})/@0x4702b95 - animation-leash#0
+09-10 09:36:33.580   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.595   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 5 lines
+09-10 09:36:33.595   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.604  5384  5384 D aloha.BackgroundStartupDetector: AddHouseholdContactsActivity stopped; mActivityStartCount=1, mActivityResumeCount=1
+09-10 09:36:33.605  5384  5384 D aloha.AppStateLoggerCore: Entity AddHouseholdContactsActivity changed state to ActivityStopped
+09-10 09:36:33.605  5384  5384 D aloha.AlohaActivityLifeCycleCallbacks: onActivityStopped: AddHouseholdContactsActivity
+09-10 09:36:33.605  5384  5384 D aloha.AlohaStartupTracker: activityOnStopBegin activity: com.facebook.alohacommon.contacts.activity.household.AddHouseholdContactsActivity, app: com.facebook.alohaapps.contacts, startupType: NONE
+09-10 09:36:33.609  5384  5384 D aloha.AppStateLoggerCore: Entity AddHouseholdContactsActivity changed state to ActivityDestroyed
+09-10 09:36:33.609   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.610  5384  5384 D aloha.AlohaActivityLifeCycleCallbacks: onActivityDestroyed: AddHouseholdContactsActivity
+09-10 09:36:33.610  5384  5384 D aloha.AlohaStartupTracker: activityOnDestroyBegin activity: com.facebook.alohacommon.contacts.activity.household.AddHouseholdContactsActivity, app: com.facebook.alohaapps.contacts, startupType: NONE
+09-10 09:36:33.611  6921  6921 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+09-10 09:36:33.611  6921  6921 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_COMMA, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=256353, downTime=256353, deviceId=-1, source=0x101 }
+09-10 09:36:33.611   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.618  1106  6066 V WindowManager: Got dream target window: Window{fc4d2fa u0 com.facebook.alohaapps.contacts/com.facebook.aloha.app.contacts.activities.landing.AlohaContactsMainActivity}
+09-10 09:36:33.612   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.625   763   810 W SurfaceFlinger: Attempting to destroy on removed layer: AppWindowToken{eac4db4 token=Token{da8a87 ActivityRecord{d693ac6 u0 com.facebook.alohaapps.contacts/com.facebook.alohacommon.contacts.activity.household.AddHouseholdContactsActivity t77}}}#0
+09-10 09:36:33.628   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.629   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 1 line
+09-10 09:36:33.629   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:33.630  5384  5384 I aloha.GlobalPicker: Removing callback for [com.facebook.alohacommon.contacts.viewmodel.GlobalPickerManagerImpl$globalPickerOwnerCallback$1@b03cb7f]
+09-10 09:36:33.630  6921  6921 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_COMMA, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=256353, downTime=256353, deviceId=-1, source=0x101 }
+09-10 09:36:33.633  6921  6921 D AndroidRuntime: Shutting down VM
+09-10 09:36:33.644   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:34.047   763   763 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 64 lines
+09-10 09:36:34.048   763   763 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: Using fallback to get webview version
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: java.lang.ClassNotFoundException: androidx.webkit.WebViewCompat
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: 	at java.lang.Class.classForName(Native Method)
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: 	at java.lang.Class.forName(Class.java:453)
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: 	at java.lang.Class.forName(Class.java:378)
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerCore.getWebViewVersion(AppStateLoggerCore.java:1707)
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.serializeToStream(AppStateLoggerThread.java:765)
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.updateJsonBlob(AppStateLoggerThread.java:706)
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.updateAppState(AppStateLoggerThread.java:804)
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.runImpl(AppStateLoggerThread.java:384)
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.run(AppStateLoggerThread.java:210)
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: Caused by: java.lang.ClassNotFoundException: Didn't find class "androidx.webkit.WebViewCompat" on path: DexPathList[[zip file "/system/framework/org.apache.http.legacy.boot.jar", zip file "/data/app/com.facebook.alohaapps.contacts-bG1ZE_dfaWorWH0xnF6_Tg==/base.apk"],nativeLibraryDirectories=[/data/app/com.facebook.alohaapps.contacts-bG1ZE_dfaWorWH0xnF6_Tg==/lib/arm, /data/app/com.facebook.alohaapps.contacts-bG1ZE_dfaWorWH0xnF6_Tg==/base.apk!/lib/armeabi-v7a, /system/lib]]
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:134)
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+09-10 09:36:34.065  5384  5584 D aloha.AppStateLoggerCore: 	... 9 more
+09-10 09:36:34.067  5384  5584 W aloha.AppStateLoggerCore: Failed to get webview version
+09-10 09:36:34.067  5384  5584 W aloha.AppStateLoggerCore: android.content.pm.PackageManager$NameNotFoundException: com.google.android.webview
+09-10 09:36:34.067  5384  5584 W aloha.AppStateLoggerCore: 	at android.app.ApplicationPackageManager.getPackageInfoAsUser(ApplicationPackageManager.java:181)
+09-10 09:36:34.067  5384  5584 W aloha.AppStateLoggerCore: 	at android.app.ApplicationPackageManager.getPackageInfo(ApplicationPackageManager.java:152)
+09-10 09:36:34.067  5384  5584 W aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerCore.getWebViewVersion(AppStateLoggerCore.java:1723)
+09-10 09:36:34.067  5384  5584 W aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.serializeToStream(AppStateLoggerThread.java:765)
+09-10 09:36:34.067  5384  5584 W aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.updateJsonBlob(AppStateLoggerThread.java:706)
+09-10 09:36:34.067  5384  5584 W aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.updateAppState(AppStateLoggerThread.java:804)
+09-10 09:36:34.067  5384  5584 W aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.runImpl(AppStateLoggerThread.java:384)
+09-10 09:36:34.067  5384  5584 W aloha.AppStateLoggerCore: 	at com.facebook.analytics.appstatelogger.AppStateLoggerThread.run(AppStateLoggerThread.java:210)
+09-10 09:36:34.079  5384  5584 D aloha.AppStateLoggerThread: Dumped app state in memory to file
+09-10 09:36:34.173  4359  4359 E Security-LocalReporter: category=TrustedAppIntentScope, message=No matching packages available.
+09-10 09:36:34.174  4359  4359 E aloha.DeviceOwnerServiceManager: bindService failed, retry
+09-10 09:36:34.778  5384  5401 I haapps.contact: Background concurrent copying GC freed 250440(11MB) AllocSpace objects, 1(20KB) LOS objects, 49% free, 19MB/39MB, paused 235us total 113.115ms
+09-10 09:36:35.037   993   993 I CollectPingData: PING facebook.com (157.240.22.35) 56(84) bytes of data.
+09-10 09:36:35.037   993   993 I CollectPingData: --- facebook.com ping statistics ---
+09-10 09:36:35.037   993   993 I CollectPingData: 5 packets transmitted, 5 received, 0% packet loss, time 4002ms
+09-10 09:36:35.037   993   993 I CollectPingData: rtt min/avg/max/mdev = 18.021/34.631/65.308/16.222 ms
+09-10 09:36:35.039   993   993 I CollectPingData: ipv6 gateway = fe80::faa0:97ff:fe3b:f230
+09-10 09:36:35.039   993   993 I CollectPingData: ping command = /vendor/bin/ping6 -c5 -i1 -q -W1 -w5 fe80::faa0:97ff:fe3b:f230%wlan0
+09-10 09:36:35.409   722   722 W AshmemAllocator: ashmem_create_region(180) returning hidl_memory(0x7cb862c100, 180)
+09-10 09:36:35.411   977   977 W FBACP-VND: analytics-OptIn: unknown event b8_aloha_wifi_packet_drops rejected, not logged
+09-10 09:36:35.414   722   722 W AshmemAllocator: ashmem_create_region(168) returning hidl_memory(0x7cb862c100, 168)
+09-10 09:36:35.459  2280  3100 I aloha.FbnsConnectionManager: send/keepalive
+09-10 09:36:35.964   722   722 W AshmemAllocator: ashmem_create_region(13288) returning hidl_memory(0x7cb862c100, 13288)
+09-10 09:36:36.182  4359  4359 E Security-LocalReporter: category=TrustedAppIntentScope, message=No matching packages available.
+09-10 09:36:36.182  4359  4359 E aloha.DeviceOwnerServiceManager: bindService failed, retry
+09-10 09:36:36.310  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:36.310  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:36.311  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:36.356  2025  2515 W DCFPublishAPI-AndroidManifestCapabilityProvider: Cannot add capabilities for package (com.amazon.alexa.multimodal.falcon); override disabled
+09-10 09:36:36.360  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:36.360  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:36.360  2025  2515 I DCFPublishAPI-AndroidManifestCapabilityProvider: Finished Scanning 136 Packages
+09-10 09:36:36.361  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (21) capabilities ({Alexa.Presentation=interface (Alexa.Presentation) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), NavigationManager=interface (NavigationManager) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), SpeechSynthesizer=interface (SpeechSynthesizer) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.FavoritesController=interface (Alexa.FavoritesController) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.PlaylistController=interface (Alexa.PlaylistController) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), ListRenderer=interface (ListRenderer) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), AudioPlayer=interface (AudioPlayer) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), TemplateRuntime=interface (TemplateRuntime) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), SpeechRecognizer=interface (SpeechRecognizer) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), System=interface (System) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations ({"locales":["en-US","en-GB","de-DE","ja-JP","fr-FR"],"localeSwitch":true}) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.SeekController=interface (Alexa.SeekController) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.Presentation.APL=interface (Alexa.Presentation.APL) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations ({"runtime":{"maxVersion":"1.0"}}) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.PlaybackStateReporter=interface (Alexa.PlaybackStateReporter) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), PlaybackController=interface (PlaybackController) type (AlexaInterface) version (0.1) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alexa.PlaybackController=interface (Alexa.PlaybackController) type (AlexaInterface) version (1.0) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), Alerts=interface (Alerts) type (AlexaInterface) version (0.4) client (com.amazon.alexa.multimodal.falcon) configurations (null) provider (amazon.speech.devicecapability.collect.providers.AndroidManif
+09-10 09:36:36.361  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:36.361  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:36.362  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:36.362  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (0) capabilities ({}) from provider (DeviceCapabilityStore)
+09-10 09:36:36.362  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:36.362  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:36.362  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:36.362  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (0) capabilities ({}) from provider (DeviceCapabilityStore)
+09-10 09:36:36.362  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:36.362  2025  2515 I chatty  : uid=10057(com.amazon.alexa.multimodal.falcon) pool-24-thread- identical 1 line
+09-10 09:36:36.362  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:36.362  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:36.387  2025  2515 W DCFPublishAPI-AndroidManifestCapabilityProvider: Cannot add capabilities for package (com.amazon.alexa.multimodal.falcon); override disabled
+09-10 09:36:36.391  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:36.391  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:36.391  2025  2515 I DCFPublishAPI-AndroidManifestCapabilityProvider: Finished Scanning 136 Packages
+09-10 09:36:36.391  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (14) legacy flags ([name (SUPPORTS_MIXING_BEHAVIOR_FOR_AUDIO_PLAYER) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_DATAMART_NAMESPACE) value (MMSDK) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SPEECH_SYNTH_SUPPORTS_TTS_URLS) value (false) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_TARGET_PLATFORM) value (TABLET) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_KEYS_IN_HEADER) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_TTS_SPEECHMARKS) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_LYRICS_IN_CARD) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SCREEN_WIDTH) value (1280) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (AUDIO_PLAYER_SUPPORTS_TTS_URLS) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (VOICE_PROFILE_SWITCHING_DISABLED) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_HOME_AUTOMATION) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_SCRUBBING) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_ARBITRATION) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider), name (SUPPORTS_SECURE_LOCKSCREEN) value (true) client (com.amazon.alexa.multimodal.falcon) provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider)]) from provider (AndroidManifestCapabilityProvider) client ref (null)
+09-10 09:36:36.392  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.collect.providers.AndroidManifestCapabilityProvider) additive (false)
+09-10 09:36:36.392  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (0) legacy flags ([]) from provider (DeviceCapabilityStore) client ref (null)
+09-10 09:36:36.392  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:36.392  2025  2515 I DCFPublishAPI-SerializationUtil: Gathered (0) legacy flags ([]) from provider (DeviceCapabilityStore) client ref (null)
+09-10 09:36:36.392  2025  2515 I DCFPublishAPI-DeviceCapabilityProviderHelper: Provider (amazon.speech.devicecapability.persist.DeviceCapabilityStore) additive (false)
+09-10 09:36:36.392  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:36.392  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:36.393  2025  2515 W DCFPublishAPI-DeviceCapabilityStore: capabilities are not yet safe for persisting to cache or file system
+09-10 09:36:36.393  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:36.393  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:36.393  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Retrieving capabilties from peristent store
+09-10 09:36:36.393  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: Successfully loaded (0) capabilities
+09-10 09:36:36.393  2025  2515 I DCFPublishAPI-DeviceCapabilityStore: (21) changed of (21) new capabilties based on known set of (0)
+09-10 09:36:36.393  2025  2515 I DCFPublishAPI-PublishCapabilitiesTask: Change of (21) interfaces detected
+09-10 09:36:36.393  2025  2515 E ...ntity.auth.device.aa: No account mapping found for any account, returning null
+09-10 09:36:36.394  2025  2515 W DCFPublishAPI-ExternalConditionalTracker: Account Registered (false) Network Connected (true)
+09-10 09:36:36.394  2025  2515 I DCFPublishAPI-PublishCapabilitiesTask: Some external condition has not yet been satisfied
+09-10 09:36:36.394  2025  2515 I DCFPublishAPI-PublishCapabilitiesTask: Will retry publish after (5) seconds
+09-10 09:36:36.398  2106  2820 I aloha.PresenceManager: Proxy user found, can start CAMERA_SERVICE.
+09-10 09:36:36.398  2106  2820 I aloha.PrivacyModeManager: isPrivacyModeOn
+09-10 09:36:36.401  1933  1948 I PlatformSecureStateService: Calling pid 2106 does not belong to SYSTEM UID group, check for PLATFORM_SECURESTATE_SDK permission
+09-10 09:36:36.403  2106  2820 I aloha.PrivacyModeManager: isPrivacyModeOn [PRIVACY_ON]
+09-10 09:36:36.441  3249  3262 W aloha.DefaultCloseableReference: Finalized without closing: ee3e921 8988146 (type = X.0Vv)
+09-10 09:36:36.441  3249  3262 W aloha.0lX: Finalized without closing: 841edbc 8988146 (type = X.0Vv)
+09-10 09:36:36.441  3249  3262 W aloha.DefaultCloseableReference: Finalized without closing: 2768f07 8988146 (type = X.0Vv)
+09-10 09:36:36.441  3249  3262 W aloha.0lX: Finalized without closing: 841edbc 8988146 (type = X.0Vv)
+09-10 09:36:36.441  3249  3262 W aloha.DefaultCloseableReference: Finalized without closing: 2793834 8f4f65d (type = X.0Vv)
+09-10 09:36:36.441  3249  3262 W aloha.0lX: Finalized without closing: 841edbc 8f4f65d (type = X.0Vv)
+09-10 09:36:36.441  3249  3262 W aloha.DefaultCloseableReference: Finalized without closing: c4b6bd2 8f4f65d (type = X.0Vv)
+09-10 09:36:36.441  3249  3262 W aloha.0lX: Finalized without closing: 841edbc 8f4f65d (type = X.0Vv)
+09-10 09:36:36.442  3249  3262 W aloha.DefaultCloseableReference: Finalized without closing: d6314a3 c8ba3a0 (type = X.0Vv)
+09-10 09:36:36.442  3249  3262 W aloha.0lX: Finalized without closing: 841edbc c8ba3a0 (type = X.0Vv)
+09-10 09:36:36.442  3249  3262 W aloha.DefaultCloseableReference: Finalized without closing: 10f9b59 c8ba3a0 (type = X.0Vv)
+09-10 09:36:36.442  3249  3262 W aloha.0lX: Finalized without closing: 841edbc c8ba3a0 (type = X.0Vv)
+09-10 09:36:36.442  3249  3262 W aloha.DefaultCloseableReference: Finalized without closing: 4d0731e 70857ff (type = X.0Vv)
+09-10 09:36:36.442  3249  3262 W aloha.0lX: Finalized without closing: 841edbc 70857ff (type = X.0Vv)
+09-10 09:36:36.442  3249  3262 W aloha.DefaultCloseableReference: Finalized without closing: 79759cc 70857ff (type = X.0Vv)
+09-10 09:36:36.442  3249  3262 W aloha.0lX: Finalized without closing: 841edbc 70857ff (type = X.0Vv)
+09-10 09:36:36.442  3249  3262 W aloha.DefaultCloseableReference: Finalized without closing: 8959415 80ca32a (type = X.0Vv)
+09-10 09:36:36.442  3249  3262 W aloha.0lX: Finalized without closing: 841edbc 80ca32a (type = X.0Vv)
+09-10 09:36:36.442  3249  3262 W aloha.DefaultCloseableReference: Finalized without closing: 394751b 80ca32a (type = X.0Vv)
+09-10 09:36:36.442  3249  3262 W aloha.0lX: Finalized without closing: 841edbc 80ca32a (type = X.0Vv)
+09-10 09:36:36.478   886   991 E storaged: getDiskStats failed with result NOT_SUPPORTED and size 0
+09-10 09:36:36.486   722   722 W AshmemAllocator: ashmem_create_region(896) returning hidl_memory(0x7cb862c100, 896)
+09-10 09:36:36.538  1106  1359 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+09-10 09:36:36.593   722   722 W AshmemAllocator: ashmem_create_region(5824) returning hidl_memory(0x7cb862c100, 5824)
+09-10 09:36:36.596   977   977 W FBACP-VND: analytics-OptIn: unknown event b8_aloha_gfxinfo_jank_frames rejected, not logged
+09-10 09:36:36.792  5137  5241 I aloha.SpotifyPlayer: onConnectionNotification: 7
+09-10 09:36:37.795  5137  5241 I aloha.SpotifyPlayer: onConnectionNotification: 7
+09-10 09:36:38.189  4359  4359 E Security-LocalReporter: category=TrustedAppIntentScope, message=No matching packages available.
+09-10 09:36:38.189  4359  4359 E aloha.DeviceOwnerServiceManager: bindService failed, retry
+09-10 09:36:38.911  7014  7014 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<

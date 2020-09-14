@@ -121,3 +121,4 @@ alias spbf="source $HOME/.private/.bash_functions"
 alias hu='hg-sl-up'
 alias c='clear'
 alias lc='adb logcat -c'
+alias gitlintamend='ga . && git commit --amend --no-edit'
