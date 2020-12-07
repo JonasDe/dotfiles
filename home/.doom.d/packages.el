@@ -50,4 +50,3 @@
 ;(unpin! t)
 (package! org-download)
 (package! evil-multiedit)
-(package! rjsx-mode)

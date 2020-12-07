@@ -47,12 +47,10 @@
                  :prepend t ))
 
   (add-to-list 'org-capture-templates
-               '("c" "Cheatsheet" entry
+               '("x" "File reference" entry
                  (file+headline "~/dotfiles/TODO/cheatsheet.org" "Cheatsheet")
-                 (file "~/.doom.d/templates/cheatsheet.org"))))
-
-                 ;; "* TODO %?\n :PROPERTIES:\n :CATEGORY: dream\n :END:\n %i\nfile:%F::%(with-current-buffer (org-capture-get :original-buffer) (number-to-string (line-number-at-pos)))"
-                 ;; :prepend t )))
+                 "* TODO %?\n :PROPERTIES:\n :CATEGORY: dream\n :END:\n %i\nfile:%F::%(with-current-buffer (org-capture-get :original-buffer) (number-to-string (line-number-at-pos)))"
+                 :prepend t )))
 
   ;; (add-to-list 'org-capture-templates
   ;;              '("x" "CheatSheet" entry
@@ -109,4 +107,3 @@
 
 (require 'evil-multiedit)
 (evil-multiedit-default-keybinds)
-(require 'rjsx-mode)

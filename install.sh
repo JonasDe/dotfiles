@@ -25,7 +25,7 @@ SCPALLOWFILE=.scpallow
 SYMLINK_MAP=("home,$HOME" "config,$CONFIG_HOME" "share,$LOCAL_SHARE" "hooks,$DOTFILES_ROOT/.git/hooks" "emacs-private,$EMACS_PRIVATE" "dev,$HOME/dev")
 
 ### ---- DISTRO SPECIFIC  ----
-# To add anew distr, follow the numbered guide
+# To add a new distro, follow the numbered guide
 # 1. Add new distro here
 MAC=Darwin
 UBUNTU=ubuntu

@@ -52,7 +52,7 @@ alias ep="vim $HOME/.profile"
 
 ## Quick Navigation
 alias cdff="cd $HOME/.config/fish/functions"
-alias dot="cd $HOME/dotfiles"
+alias dotf="cd $HOME/dotfiles"
 alias dev="cd $HOME/dev"
 alias cdvcfg="cd $HOME/.vim/config/"
 alias ..="cd .."
@@ -111,7 +111,7 @@ alias estar="vim $HOME/dotfiles/config/starship.toml"
 alias lzd="lazydocker"
 alias hs="hg status"
 alias tls='tmux list-session'
-alias q='exit'
+alias q='nq'
 alias epa='vim /Users/jdanebjer/.private/.bash_aliases'
 alias spa='source /Users/jdanebjer/.private/.bash_aliases'
 alias cl='clear'
@@ -122,3 +122,5 @@ alias hu='hg-sl-up'
 alias c='clear'
 alias lc='adb logcat -c'
 alias gitlintamend='ga . && git commit --amend --no-edit'
+alias fb='z fba'
+alias lres='hg resolve -l'

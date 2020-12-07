@@ -38,6 +38,7 @@ source_if_mac(){
     [[ "$OSTYPE" == "darwin"* ]] && [ -f $1 ] && source $1
 }
 
+
 if [ -n "$BASH_VERSION" ]; then
     SOURCES+=($HOME/.fzf.bash)
     # include .bashrc if it exists
@@ -82,4 +83,6 @@ if [ -n "$FISH_VERSION" ]; then
         export PATH="$p:$PATH"
     done
 fi
+[[ "$OSTYPE" == "darwin"* ]] && hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x70000002A}]}' > /dev/null
+
 command -v setxkbmap > /dev/null && setxkbmap -option caps:backspace

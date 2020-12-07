@@ -1,18 +1,18 @@
 # dotfiles
 
-This is my own personal collection of dotfiles. It contains very personal configuration, as well as an installation script (`install.sh`) which provides some basis for dotfiles management. Some features included in this bash script can be seen below.
+This is my own personal collection of dotfiles for various tooling that I come across. `install.sh` is the main entrypoint for deploying and managing the dotfiles. The intention is for the dotfiles to be deployable across multiple OSes and distros (macOS, Arch, Ubuntu) with the same script without causing conflict. This is a constant work in progress so there are no guarantees that this works out of the box.
 
-## `install.sh` features
+## `install.sh` 
 
-* SCP dotfiles over SSH to host (files included are defined in the `.scpallow`` file)
-* Deploy dotfiles over SSH to host (SSH -> Clone -> Link)
+This shell script supports the following functionality:
+
+* SCP dotfiles over SSH to destination host (will be applied to files defined in `.scpallow` file)
+* Deploy dotfiles over SSH to destination host (SSH -> Clone -> Link)
 * Flag for filtering affected files to 'core' via `.coreonly`
 * Flag for filtering affected files to 'offline' via `.offlineonly`
 * Automatic backup prior to overwrite
-* Modularizable installation with section prompts
-* Bash compatible 
 * Support for omitting files based on current OS
-
+* Modularity - each of the above flags and ignores operate on a per-module basis. A module is a folder defined in repo root, and is added to the `SYMLINK_MAP` variable defined in `install.sh`. This variable defines where the various modules should be placed in the file system. 
 
 *Examples*:
 
