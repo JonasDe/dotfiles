@@ -10,9 +10,9 @@
 
 # setxkbmap -option caps:backspace
 
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # Macos caps
 #$ hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x70000002A}]}'
 
 [ -f ~/.local/.profile ] && source ~/.local/.profile
+. "$HOME/.cargo/env"

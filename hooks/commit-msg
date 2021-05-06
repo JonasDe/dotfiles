@@ -23,25 +23,26 @@
 	#exit 1
 #}
 #!/bin/bash
-MSG_FILE=$1
-FILE_CONTENT="$(cat $MSG_FILE)"
+#MSG_FILE=$1
+#FILE_CONTENT="$(cat $MSG_FILE)"
 # Initialize constants here
-CONSTANTS=(add fix update remove refactor rework move)
-RE=""
-for CONSTANT in "${CONSTANTS[@]}"; do
-    RE+="${CONSTANT}:|"
-done
-RE+="Merge"
+# TODO fix
+#CONSTANTS=(add fix update remove refactor rework move)
+#RE=""
+#for CONSTANT in "${CONSTANTS[@]}"; do
+    #RE+="${CONSTANT}:|"
+#done
+#RE+="Merge"
 
 
-export REGEX="^($RE) .+"
-export ERROR_MSG="Commit message format must match regex \"${REGEX}\""
+#export REGEX="^($RE) .+"
+#export ERROR_MSG="Commit message format must match regex \"${REGEX}\""
 
-if [[ $FILE_CONTENT =~ $REGEX ]]; then
- echo "Good commit!"
-else
-  echo "Bad commit \"$FILE_CONTENT\""
- echo $ERROR_MSG
- exit 1
-fi
+#if [[ $FILE_CONTENT =~ $REGEX ]]; then
+ #echo "Good commit!"
+#else
+#  echo "Bad commit \"$FILE_CONTENT\""
+# echo $ERROR_MSG
+# exit 1
+#fi
 exit 0

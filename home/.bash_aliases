@@ -124,3 +124,4 @@ alias lc='adb logcat -c'
 alias gitlintamend='ga . && git commit --amend --no-edit'
 alias fb='z fba'
 alias lres='hg resolve -l'
+alias dot="cd $HOME/dotfiles"

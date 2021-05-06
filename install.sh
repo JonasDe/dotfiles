@@ -36,7 +36,7 @@ SUPPORTED_DISTROS="$MAC $UBUNTU $ARCH $FEDORA"
 
 # 3. Add your OS installation function, accepting variable arguments
 ubuntu_install() {
-  apt-get install $@
+  sudo apt-get install -y $@ 
 }
 fedora_install() {
   dnf install $@
@@ -65,7 +65,7 @@ elif [[ "$(uname)" == "$MAC" ]]; then
   OS=$MAC
   OS_INSTALL=mac_install
   OS_IGNORE=.macignore
-elif [[ "$(uname -r)" == *"$UBUNTU"* ]]; then
+elif [[ "$(cat /etc/lsb-release)" == *"$UBUNTU"* ]]; then
   OS=$UBUNTU
   OS_INSTALL=ubuntu_install
   OS_IGNORE=.ubuntignore
@@ -177,6 +177,8 @@ install_as() {
   for i in $(seq 1 $shifts); do
     shift
   done
+
+  echo -e "Installing >> ${green} $@ ${white}: "
   $OS_INSTALL "$@"
 }
 
@@ -216,6 +218,10 @@ TODO() {
   git submodule update --recursive --remote
   ln -s $DOTFILES_ROOT/TODO/$TODO_FILE $HOME/$TODO_FILE
 }
+_fzf(){
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+}
 fish_install() {
   curl -L https://get.oh-my.fish | fish
   fish -c "omf install https://github.com/jethrokuan/fzf"
@@ -224,11 +230,59 @@ fish_install() {
 _tmux() {
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 }
+_diff-so-fancy(){
+# tired of "Unable to locate package diff-so-fancy ?"
+# choose a folder that is in your PATH or create a new one
+    mkdir -p ~bin
+    # add ~/bin to your PATH (.bashrc or .zshrc)
+    cd ~/bin
+    git clone https://github.com/so-fancy/diff-so-fancy diffsofancy
+    chmod +x diffsofancy/diff-so-fancy
+    ln -s ~/bin/diffsofancy/diff-so-fancy ~/bin/diff-so-fancy
+
+}
+latest(){
+    curl -s https://api.github.com/repos/$1/releases/latest \
+    | grep "browser_download_url.*deb" \
+    | cut -d : -f 2,3 \
+    | tr -d \" \
+    | wget -qi -
+}
+_fd(){
+    install_as $UBUNTU $FEDORE fd-find
+    install_as $ARCH $MAC fd
+}
+cargo_install(){
+    [[ $(command -v cargo) ]] && cargo install $1
+}
+
 cli_utils() {
-  install_as $ARCH $FEDORA $UBUNTU $MAC fd exa htop zsh neovim ripgrep xclip fzf tmux rxvt-unicode bat tldr colordiff glances diff-so-fancy fasd
-  install_as $ARCH $FEDORA $UBUNTU jq expac rofi guake rofi-emoji autocutsel
+  install_as $ARCH $FEDORA $UBUNTU $MAC htop 
+  install_as $ARCH $FEDORA $UBUNTU $MAC neovim 
+  install_as $ARCH $FEDORA $UBUNTU $MAC ripgrep 
+  install_as $ARCH $FEDORA $UBUNTU $MAC xclip 
+  install_as $ARCH $FEDORA $UBUNTU $MAC tmux 
+  install_as $ARCH $FEDORA $UBUNTU $MAC rxvt-unicode 
+  install_as $ARCH $FEDORA $UBUNTU $MAC bat 
+  install_as $ARCH $FEDORA $UBUNTU $MAC tldr 
+  install_as $ARCH $FEDORA $UBUNTU $MAC colordiff 
+  install_as $ARCH $FEDORA $UBUNTU $MAC glances  
+  install_as $ARCH $FEDORA $UBUNTU $MAC fasd 
+  install_as $ARCH $FEDORA $UBUNTU $MAC zsh 
+  _fzf 
+  _diff-so-fancy
+  _fd
+  cargo_install exa
+  cargo_install bat
+  install_as $ARCH $FEDORA $UBUNTU jq 
+  install_as $ARCH $FEDORA $UBUNTU expac 
+  install_as $ARCH $FEDORA $UBUNTU rofi 
+  install_as $ARCH $FEDORA $UBUNTU guake 
+  install_as $ARCH $FEDORA $UBUNTU rofi-emoji 
+  install_as $ARCH $FEDORA $UBUNTU autocutsel
   install_as $ARCH gvim
-  install_as $MAC starship lazydocker
+  install_as $MAC starship 
+  install_as $MAC lazydocker
   if [[ $OS == $ARCH ]]; then
     git clone https://aur.archlinux.org/lazydocker.git /tmp/lazydocker
     $(cd /tmp/lazydocker && makepkg --install)
@@ -240,7 +294,12 @@ cli_utils() {
   git clone --depth=1 https://github.com/powerline/fonts.git /tmp/fonts
   $(cd /tmp/fonts && ./install.sh)
   rm -rf /tmp/fonts
-  install_with snap $ARCH starship
+  if [[ $OS == $ARCH ]]; then
+    install_with snap $ARCH starship
+  else
+    sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+  fi
+
 }
 _git() {
   install_as $ARCH $FEDORA $UBUNTU $MAC git diff-so-fancy
@@ -321,6 +380,7 @@ restore() {
 }
 
 install_packages() {
+  echo "Detected OS: $OS"
   SECTIONS=(basics cli_utils emacs fish_install TODO)
   if [[ $OS != $MAC ]]; then SECTIONS+=(i3wm_themer); fi
   if [[ $OS == $ARCH ]]; then SECTIONS+=(audio); fi

@@ -4,6 +4,7 @@ ENVS=("CONFIG,$HOME/config" "DOT,$HOME/dotfiles", "NVM_DIR,$HOME/.nvm")
 SOURCES_FILES=(.bash_aliases .bash_functions)
 SOURCES_DIRS=($HOME $HOME/.private $HOME/.local)
 SOURCES=($HOME/.bin/z.sh $HOME/.private/.shell.common)
+export PATH="$PATH:$HOME/bin"
 
 for i in ${SOURCES_DIRS[@]};
 do
